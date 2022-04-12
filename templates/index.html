@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+
+<!-- Page Title -->
+{% block title %}
+<title>Lettuce Eat - Home</title>
+{% endblock %}
+
+
+<!-- Main Content -->
+{% block content %}
+<main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Album example</h1>
+        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+        <p>
+          <a href="#" class="btn btn-primary my-2">Main call to action</a>
+          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+        {% for recipe in recipe_list %}
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+                {% if "placeholder" in recipe.featured_image.url %}
+                {% load static %}
+                <img class="card-img-top" src="{% static 'site_images/salad-g46be2ceac_1920.jpg' %}"
+                alt="Bowl of salad">
+                {% else %}
+                <img class="card-img-top recipe-image" src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
+                {% endif %}
+
+                <div class="card-body">
+                    <h5 class="card-title">{{ recipe.title }}</h5>
+                    <p class="card-text">{{ recipe.excerpt }}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Serves: {{ recipe.serves }}</li>
+                    <li class="list-group-item">Serves: {{ recipe.difficulty }}</li>
+                    <li class="list-group-item">Prep: {{ recipe.prep_time }} min</li>
+                    <li class="list-group-item">Cook: {{ recipe.cook_time }} min</li>
+                    <li class="list-group-item"><i class="fa-solid fa-heart"></i> {{ recipe.amount_of_likes }}
+                    </li>
+                </ul>
+              
+                <div class="card-footer">
+                    <a href="#" class="btn">View
+                        Recipe</a>
+                </div>
+            </div>
+        </div>
+              </div>
+            </div>
+          </div>
+
+          {% if forloop.counter|divisibleby:3 %}
+        </div>
+        <div class="row">
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="row mt-3">
+            {% if is_paginated %}
+            <nav aria-label="Page Navigation">
+                <ul class="pagination justify-content-center">
+                    {% if page_obj.has_previous %}
+                    <li>
+                        <a href="?page={{ page_obj.previous_page_number }}" class="page_link">&laquo;
+                            Previous</a>
+                    </li>
+                    {% endif %}
+                    {% if page_obj.has_next %}
+                    <li>
+                        <a href="?page={{ page_obj.next_page_number }}" class="page_link">Next &raquo;</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+  </main>

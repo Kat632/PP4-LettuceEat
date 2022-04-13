@@ -38,11 +38,11 @@
   
   .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 
-  h1, h2, h3, h4 {
+  h1, h2, h4, h5 {
     font-family: 'Poppins', sans-serif;
   }
 
-  h5 {
+  h3 {
     font-family: 'Dancing Script', cursive;
   }
 

@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Recipe
 from .forms import CommentForm
 
@@ -75,4 +76,21 @@ class RecipeDetail(View):
                 "comment_form": CommentForm(),
             },
         )
-        
+
+
+class RecipeLike(View):
+    """
+    Like a recipe
+    """
+    def post(self, request, slug):
+        """
+        Change view
+        """
+        recipe = get_object_or_404(Recipe, slug=slug)
+
+        if recipe.likes.filter(id=request.user.id).exists():
+            recipe.likes.remove(request.user)
+        else:
+            recipe.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))

@@ -52,52 +52,70 @@
                     <div class="card bg-light">
                         <div class="card-body">
                             <h3>Comments</h3>
-                            <!-- Comment form-->
-                            {% if user.is_authenticated %}
-                            <p>Posting as {{ user.username }}</p>
-                            
-                            <form method="post" class="mb-4">
-                                {{ comment_form | crispy }}
-                                {% csrf_token %}
-                            <button type = "submit" class="btn btn-signup btn-lg">Submit</button>
-                            </form>
-
-                            {% endif %}
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <!-- Side widgets-->
-            <div class="col-lg-4">
-                <!-- Categories widget-->
-                <div class="card mb-4">
-                    <div class="card-header">Details</div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <ul class="list-unstyled mb-0">
-                                    <li class="list-group-item">Serves: {{ recipe.serves }}</li>
-                                    <li class="list-group-item">Difficulty: {{ recipe.difficulty }}</li>
-                                    <li class="list-group-item">Prep: {{ recipe.prep_time }} min</li>
-                                    <li class="list-group-item">Cook: {{ recipe.cook_time }} min</li>
-                                    <li class="list-group-item"><i class="fa-solid fa-heart"></i>
-                                        {{ recipe.amount_of_likes }}
-                                    </li>
-                                </ul>
+                            <!-- Single comment-->
+                            {% for comment in comments %}
+                            <div class="d-flex">
+                                <div class="ms-3">
+                                    <div class="fw-bold">{{ comment.name }}, created a comment on {{ comment.created_on }}</div>
+                                    <p>{{ comment.body | linebreaks }}</p>
+                                </div>
                             </div>
+                            {% endfor %}
+                        </div>
+
+                        <!-- Comment form-->
+
+                        {% if commented %}
+                        <div class="alert alert-success" role="alert">
+                            Thank you! Your comment will appear once approved.
+                        </div>
+                        {% else %}
+
+                        {% if user.is_authenticated %}
+                        <p>Posting as {{ user.username }}</p>
+
+                        <form method="post" class="mb-4">
+                            {{ comment_form | crispy }}
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                        </form>
+                        {% endif %}
+                        {% endif %}
+                    </div>
+            </div>
+            </section>
+        </div>
+        <!-- Side widgets-->
+        <div class="col-lg-4">
+            <!-- Categories widget-->
+            <div class="card mb-4">
+                <div class="card-header">Details</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled mb-0">
+                                <li class="list-group-item">Serves: {{ recipe.serves }}</li>
+                                <li class="list-group-item">Difficulty: {{ recipe.difficulty }}</li>
+                                <li class="list-group-item">Prep: {{ recipe.prep_time }} min</li>
+                                <li class="list-group-item">Cook: {{ recipe.cook_time }} min</li>
+                                <li class="list-group-item"><i class="fa-solid fa-heart"></i>
+                                    {{ recipe.amount_of_likes }}
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Side widget-->
-                <div class="card mb-4">
-                    <div class="card-header">
-                        <h3>Ingredients</h3>
-                    </div>
-                    <div class="card-body">{{ recipe.ingredients }}</div>
+            <!-- Side widget-->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3>Ingredients</h3>
                 </div>
+                <div class="card-body">{{ recipe.ingredients | safe }}</div>
             </div>
         </div>
+    </div>
     </div>
 
     {% endblock %}

@@ -2,7 +2,29 @@ from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Recipe
-from .forms import CommentForm
+from .forms import CommentForm, RecipeForm
+
+
+def create_recipe(request):
+    """
+    renders share a recipe page
+    """
+    recipe_form = RecipeForm(request.POST or None, request.FILES or None)
+    context = {
+        'recipe_form': recipe_form,
+    }
+
+    if request.method == "POST":
+        recipe_form = RecipeForm(request.POST, request.FILES)
+        if recipe_form.is_valid():
+            recipe_form = recipe_form.save(commit=False)
+            recipe_form.author = request.user
+            recipe_form.status = 1
+            recipe_form.save()
+            return redirect('home')
+    else:
+        recipe_form = RecipeForm()
+    return render(request, "create_recipe.html", context)
 
 
 class RecipeList(generic.ListView):
@@ -29,7 +51,7 @@ class RecipeDetail(View):
         liked = False
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True
-        
+
         return render(
             request,
             "recipe_detail.html",
@@ -40,7 +62,7 @@ class RecipeDetail(View):
                 "liked": liked,
                 "comment_form": CommentForm(),
             },
-        )     
+        )
 
     def post(self, request, slug, *args, **kwargs):
         """

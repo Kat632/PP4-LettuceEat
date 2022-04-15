@@ -100,7 +100,7 @@
                                 <li class="list-group-item">Cook: {{ recipe.cook_time }} min</li>
                                 <li class="list-group-item">               
                                     {% if user.is_authenticated %}
-                                    <form action="{% url 'recipe_like' recipe.slug %}" class="d-inline" method="POST">
+                                    <form id="like_form" action="{% url 'recipe_like' recipe.slug %}" class="d-inline" method="POST">
                                         {% csrf_token %}
                                         {% if liked %}
                                         <button type="submit" name="recipe_id" value="{{ recipe.slug }}"
@@ -112,6 +112,7 @@
                                             {{ recipe.amount_of_likes }}</button>
                                         {% endif %}
                                         {% endif %}
+                                    </form>
                                 </li>
                             </ul>
                         </div>
@@ -133,3 +134,5 @@
     {% endblock %}
 
 </main>
+
+</html>

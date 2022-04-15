@@ -27,6 +27,37 @@ def create_recipe(request):
     return render(request, "create_recipe.html", context)
 
 
+def edit_recipe(request, slug):
+    """
+    Recipe update view
+    """
+    recipe = get_object_or_404(Recipe, slug=slug)
+    recipe_form = RecipeForm(request.POST or None, instance=recipe)
+    context = {
+        "recipe_form": recipe_form,
+        "recipe": recipe
+    }
+    if request.method == "POST":
+        recipe_form = RecipeForm(request.POST, request.FILES, instance=recipe)
+        if recipe_form.is_valid():
+            recipe = recipe_form.save(commit=False)
+            recipe.author = request.user
+            recipe.save()
+            return redirect('home')
+    else:
+        recipe_form = RecipeForm(instance=recipe)
+    return render(request, "edit_recipe.html", context)
+
+
+def delete_recipe(request, slug):
+    """
+    Recipe delete view
+    """
+    recipe = Recipe.objects.get(slug=slug)
+    recipe.delete()
+    return redirect('home')
+
+
 class RecipeList(generic.ListView):
     """
     Creates the recipe list

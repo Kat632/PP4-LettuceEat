@@ -47,6 +47,17 @@
                         </div>
                     </section>
                 </article>
+
+                <div class="col mt-2 mb-3">
+                    {% if user.id == recipe.author.id %}
+                    <a href="{% url 'edit_recipe' recipe.slug %}" class="edit"><button
+                            class="btn btn-signup btn-md" value="{{ recipe.slug }}"
+                            type="button">Edit</button></a>
+                    <a href="{% url 'delete_recipe' recipe.slug %}" class="delete"><button
+                            class="btn btn-danger btn-md mx-4" value="{{ recipe.slug }}" type="button">Delete</button></a>
+                    {% endif %}
+                </div>
+
                 <!-- Comments section-->
                 <section class="mb-5">
                     <div class="card bg-light">

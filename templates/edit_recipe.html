@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load cloudinary %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block title %}
+<title>Edit Your Recipe</title>
+{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+    <div class="container text-light">
+        <div class="row">
+            <div class="col mt-3 mb-5">
+                <h1 class="text-center">Edit Your Recipe</h1>
+                <form action="?action=save" method="post" style="margin-top: 1.3em;" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col">
+                            {{ recipe_form | crispy | safe }}
+                            {% csrf_token %}
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="container">
+        <div class="row">
+            <div class="col mt-3 mb-5 text-light text-center">
+                <h1 class="mb-5">You are not logged in!</h1>
+                <p>Please <a href="{% url 'account_login' %}">log in</a> or <a href="{% url 'account_signup' %}">register</a> an account to edit a recipe.</p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}

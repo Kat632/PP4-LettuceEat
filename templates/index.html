@@ -8,10 +8,23 @@
 
 <!-- Header Image -->
 {% block header %}
-<header>
-    {% load static %}
-    <img class="img-fluid header-image" src="{% static 'site_images/toinane-OpLaMhfqTwQ-unsplash.jpg' %}" alt="lettuce background image">
-</header>
+        <!-- Header-->
+        <header class="bg-light py-5">
+            <div class="container-fluid">
+                <div class="row gx-5 justify-content-center">
+                    {% load static %}
+                    <img class="img-fluid header-image" src="{% static 'site_images/toinane-OpLaMhfqTwQ-unsplash.jpg' %}" alt="lettuce background image">
+                    <div class="col-lg-6">
+                        <div class="my-5 caption">
+                            <div class="text-center">
+                            <h1 class="display-5 fw-bolder mb-2 lettuce-text">Lettuce Eat</h1>
+                            <h2 class="lead mb-4 lettuce-text">A recipe blog dedicated to the love of salad!</h2>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
 {% endblock %}
 
 
@@ -19,44 +32,37 @@
 {% block content %}
 <main role="main">
 
-    <section class="jumbotron text-center">
-      <div class="container">
-        <h1 class="jumbotron-heading lettuce-eat">Lettuce Eat</h1>
-        <p class="lead text-muted">A recipe blog dedicated to the love of salad.</p>
-      </div>
-    </section>
-
-    <div class="album py-5 bg-light">
-      <div class="container">
-
-        {% for recipe in recipe_list %}
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card mb-4 box-shadow">
-                {% if "placeholder" in recipe.featured_image.url %}
-                {% load static %}
-                <img class="card-img-top" src="{% static 'site_images/salad-g46be2ceac_1920.jpg' %}"
-                alt="Bowl of salad">
-                {% else %}
-                <img class="card-img-top recipe-image" src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
-                {% endif %}
-
-                <div class="card-body">
-                    <h3 class="card-title">{{ recipe.title }}</h3>
-                    <p class="card-text">{{ recipe.excerpt }}</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Serves: {{ recipe.serves }}</li>
-                    <li class="list-group-item">Difficulty: {{ recipe.difficulty }}</li>
-                    <li class="list-group-item">Prep: {{ recipe.prep_time }} min</li>
-                    <li class="list-group-item">Cook: {{ recipe.cook_time }} min</li>
-                    <li class="list-group-item"><i class="fa-solid fa-heart"></i> {{ recipe.amount_of_likes }}
-                    </li>
-                </ul>
-              
-                <div class="card-footer">
-                    <a href="{% url 'recipe_detail' recipe.slug %}" class="btn">View
-                        Recipe</a>
+    <div class="container text-center text-md-left mb-3">
+        <div class="row text-center text-md-left g-3 card-row">
+            {% for recipe in recipe_list %}
+            <div class="col-12 col-md-6 col-lg-3 col-xl-3 mx-auto mt-3">
+                <div class="card box-shadow h-100">
+                    {% if "placeholder" in recipe.featured_image.url %}
+                    {% load static %}
+                    <img class="card-img-top" src="{% static 'site_images/salad-g46be2ceac_1920.jpg' %}"
+                    alt="Bowl of salad">
+                    {% else %}
+                    <img class="card-img-top recipe-image" src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h3 class="card-title">{{ recipe.title }}</h3>
+                        <p class="card-text">{{ recipe.excerpt }}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Serves: {{ recipe.serves }}</li>
+                        <li class="list-group-item">Difficulty: {{ recipe.difficulty }}</li>
+                        <li class="list-group-item">Prep: {{ recipe.prep_time }} min</li>
+                        <li class="list-group-item">Cook: {{ recipe.cook_time }} min</li>
+                        <li class="list-group-item"><i class="fa-solid fa-heart"></i> {{ recipe.amount_of_likes }}
+                        </li>
+                    </ul>
+                  
+                    <div class="card-footer">
+                        <a href="{% url 'recipe_detail' recipe.slug %}" class="btn">View
+                            Recipe</a>
+                    </div>
+                   
+                    
                 </div>
             </div>
         </div>

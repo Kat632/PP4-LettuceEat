@@ -53,3 +53,34 @@
   .lettuce-eat {
     font-family: 'Dancing Script', cursive;
   }
+
+  .header-image {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    background-color: #F3722C;
+  }
+
+  .lettuce-text {
+    color: #1A250E;
+    font-size: 4rem;
+  }
+  
+/*
+ BUTTON STYLING
+*/
+
+.btn {
+  position: relative;
+  color: #1A250E;
+  width: 256px;
+  height: 64px;
+  line-height: 64px;
+  transition: all 0.3s;
+}
+ 

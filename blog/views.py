@@ -5,6 +5,13 @@ from .models import Recipe
 from .forms import CommentForm, RecipeForm
 
 
+def about(request):
+    """
+    renders about page
+    """
+    return render(request, "about.html")
+    
+
 def create_recipe(request):
     """
     renders share a recipe page
@@ -16,6 +23,7 @@ def create_recipe(request):
 
     if request.method == "POST":
         recipe_form = RecipeForm(request.POST, request.FILES)
+        print("hello555")
         if recipe_form.is_valid():
             recipe_form = recipe_form.save(commit=False)
             recipe_form.author = request.user

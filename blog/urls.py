@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path('', views.RecipeList.as_view(), name='home'),
+    path('about/', views.about, name='about'),
     path('add-recipe/', views.create_recipe, name='create_recipe'),
     path('edit-recipe/<slug:slug>', views.edit_recipe, name='edit_recipe'),
     path('delete-recipe/<slug:slug>', views.delete_recipe,

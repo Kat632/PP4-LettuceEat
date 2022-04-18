@@ -67,7 +67,7 @@
   }
 
   .lettuce-text {
-    color: #1A250E;
+    color: #00803f;
     font-size: 4rem;
   }
   
@@ -75,12 +75,89 @@
  BUTTON STYLING
 */
 
-.btn {
-  position: relative;
-  color: #1A250E;
-  width: 256px;
-  height: 64px;
-  line-height: 64px;
-  transition: all 0.3s;
+.btn-signup {
+	box-shadow: inset 0px 0px 0px 0px #a4e271;
+	background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+	background-color: #89c403;
+	border-radius: 6px;
+	border: 1px solid #74b807;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+	font-weight: bold;
+  width: 144px;
+  height: 60px;
+	padding: 10px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+	text-decoration: none;
+	text-shadow: 0px 2px 0px #528009;
 }
- 
+.btn-signup:hover {
+	background: linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+	background-color: #77a809;
+}
+.btn-signup:active {
+	position: relative;
+	top: 1px;
+}
+
+.btn-danger {
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+	background-color:#fe1a00;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Poppins', sans-serif;
+	font-size:1rem;
+	font-weight:bold;
+  width: 144px;
+  height: 60px;
+	padding: 10px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+.brn-danger:hover {
+	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+	background-color:#ce0100;
+}
+.brn-danger:active {
+	position:relative;
+	top:1px;
+}
+
+.btn-recipe {
+	box-shadow: inset 0px 0px 0px 0px #a4e271;
+	background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+	background-color: #89c403;
+	border-radius: 6px;
+	border: 1px solid #74b807;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+	font-weight: bold;
+  width: 150px;
+  height: 44px;
+	padding: 10px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+	text-decoration: none;
+	text-shadow: 0px 2px 0px #528009;
+}
+.btn-signup:hover {
+	background: linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+	background-color: #77a809;
+}
+.btn-signup:active {
+	position: relative;
+	top: 1px;
+}

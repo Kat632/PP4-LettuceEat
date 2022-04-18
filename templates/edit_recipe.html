@@ -17,11 +17,41 @@
                 <form action="?action=save" method="post" style="margin-top: 1.3em;" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col">
-                            {{ recipe_form | crispy | safe }}
                             {% csrf_token %}
+                            <div class="row">
+                                    {{ recipe_form.title|as_crispy_field }}
+                            </div>
+                            <div class="row">
+                                {{ recipe_form.excerpt|as_crispy_field }}
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    {{ recipe_form.prep_time|as_crispy_field }}
+                                </div>
+                                <div class="col-6">
+                                    {{ recipe_form.difficulty|as_crispy_field }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    {{ recipe_form.serves|as_crispy_field }}
+                                </div>
+                                <div class="col-6">
+                                    {{ recipe_form.cook_time|as_crispy_field }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                {{ recipe_form.ingredients|as_crispy_field }}
+                            </div>
+                            <div class="row">
+                                {{ recipe_form.method|as_crispy_field }}
+                            </div>
+                            <div class="row">
+                                {{ recipe_form.featured_image|as_crispy_field }}
+                            </div>
+                            <button type="submit" class="btn btn-signup btn-lg">Submit</button>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
                 </form>
             </div>
         </div>

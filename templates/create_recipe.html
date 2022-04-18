@@ -9,32 +9,63 @@
 {% endblock %}
 
 {% block content %}
-    {% if user.is_authenticated %}
-    <div class="container text-dark">
-        <div class="row">
-            <div class="col mt-3 mb-5">
-                <h2 class="text-center lettuce-text">Create your recipe here</h2>
-                <form action="." method="post" style="margin-top: 1.3em;" enctype="multipart/form-data">
-                    <div class="row">
-                        <div class="col">
-                            {{ recipe_form | crispy | safe }}
-                            {% csrf_token %}
+{% if user.is_authenticated %}
+<div class="container text-dark">
+    <div class="row">
+        <div class="col mt-3 mb-5">
+            <h2 class="text-center lettuce-text">Create your recipe here</h2>
+            <form action="." method="post" style="margin-top: 1.3em;" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col">
+                        {% csrf_token %}
+                        <div class="row">
+                                {{ recipe_form.title|as_crispy_field }}
                         </div>
+                        <div class="row">
+                            {{ recipe_form.excerpt|as_crispy_field }}
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                {{ recipe_form.prep_time|as_crispy_field }}
+                            </div>
+                            <div class="col-6">
+                                {{ recipe_form.difficulty|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                {{ recipe_form.serves|as_crispy_field }}
+                            </div>
+                            <div class="col-6">
+                                {{ recipe_form.cook_time|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            {{ recipe_form.ingredients|as_crispy_field }}
+                        </div>
+                        <div class="row">
+                            {{ recipe_form.method|as_crispy_field }}
+                        </div>
+                        <div class="row">
+                            {{ recipe_form.featured_image|as_crispy_field }}
+                        </div>
+                        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
                     </div>
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
     </div>
-    {% else %}
-    <div class="container">
-        <div class="row">
-            <div class="col mt-3 mb-5 text-light text-center">
-                <h1 class="mb-5">I'm sorry, you're not logged in!</h1>
-                <p>Please <a href="{% url 'account_login' %}">log in</a> or <a
+</div>
+{% else %}
+<div class="container">
+    <div class="row">
+        <div class="col mt-3 mb-5 text-light text-center">
+            <h1 class="mb-5">I'm sorry, you're not logged in!</h1>
+            <p>Please <a href="{% url 'account_login' %}">log in</a> or <a
                     href="{% url 'account_signup' %}">register</a> to share a recipe.</p>
-            </div>
         </div>
     </div>
-    {% endif %}
+</div>
+
+{% endif %}
 {% endblock %}

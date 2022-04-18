@@ -1,16 +1,22 @@
 from django.db import models
+from django_extensions.db.fields import AutoSlugField
 from django.contrib.auth.models import User
+from django_summernote.fields import SummernoteTextField
 from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 LEVEL = ((0, "Easy"), (1, "Regular"), (2, "Hard"))
+
+def my_slugify_function(content):
+    return content.replace('_', '-').lower()
 
 class Recipe(models.Model):
     """
     Model for the Recipe
     """
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = AutoSlugField(
+        populate_from='title', slugify_function=my_slugify_function)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="recipes")
     excerpt = models.TextField(blank=True)
@@ -21,9 +27,8 @@ class Recipe(models.Model):
     difficulty = models.IntegerField(choices=LEVEL, default=0)
     serves = models.IntegerField(default=1)
     cook_time = models.IntegerField(default=0)
-    ingredients = models.TextField(default="",
-                                blank=False, null=False)
-    method = models.TextField(blank=True)
+    ingredients = SummernoteTextField()
+    method = SummernoteTextField()
     featured_image = CloudinaryField('image', default='placeholder')
     likes = models.ManyToManyField(
         User,

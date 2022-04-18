@@ -8,23 +8,24 @@
 
 <!-- Header Image -->
 {% block header %}
-        <!-- Header-->
-        <header class="bg-light py-5">
-            <div class="container-fluid">
-                <div class="row gx-5 justify-content-center">
-                    {% load static %}
-                    <img class="img-fluid header-image" src="{% static 'site_images/toinane-OpLaMhfqTwQ-unsplash.jpg' %}" alt="lettuce background image">
-                    <div class="col-lg-6">
-                        <div class="my-5 caption">
-                            <div class="text-center">
-                            <h1 class="display-5 fw-bolder mb-2 lettuce-text">Lettuce Eat</h1>
-                            <h2 class="lead mb-4 lettuce-text">A recipe blog dedicated to the love of salad!</h2>
-                        </div>
-                        </div>
+<!-- Header-->
+<header class="bg-light py-5">
+    <div class="container-fluid">
+        <div class="row gx-5 justify-content-center">
+            {% load static %}
+            <img class="img-fluid header-image" src="{% static 'site_images/toinane-OpLaMhfqTwQ-unsplash.jpg' %}"
+                alt="lettuce background image">
+            <div class="col-lg-6">
+                <div class="my-5 caption">
+                    <div class="text-center">
+                        <h1 class="display-5 fw-bolder mb-2 lettuce-text">Lettuce Eat</h1>
+                        <h2 class="lead mb-4 lettuce-text">A recipe blog dedicated to the love of salad!</h2>
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
+    </div>
+</header>
 {% endblock %}
 
 
@@ -40,62 +41,61 @@
                     {% if "placeholder" in recipe.featured_image.url %}
                     {% load static %}
                     <img class="card-img-top" src="{% static 'site_images/salad-g46be2ceac_1920.jpg' %}"
-                    alt="Bowl of salad">
+                        alt="Bowl of salad">
                     {% else %}
-                    <img class="card-img-top recipe-image" src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
+                    <img class="card-img-top recipe-image" src="{{ recipe.featured_image.url }}"
+                        alt="{{ recipe.title }}">
                     {% endif %}
                     <div class="card-body">
                         <h3 class="card-title">{{ recipe.title }}</h3>
                         <p class="card-text">{{ recipe.excerpt }}</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Serves: {{ recipe.serves }}</li>
-                        <li class="list-group-item">Difficulty: {{ recipe.difficulty }}</li>
-                        <li class="list-group-item">Prep: {{ recipe.prep_time }} min</li>
-                        <li class="list-group-item">Cook: {{ recipe.cook_time }} min</li>
-                        <li class="list-group-item"><i class="fa-solid fa-heart"></i> {{ recipe.amount_of_likes }}
+                        <li class="list-group-item align-items-center"><span><i class="fa-solid fa-utensils"></i></span>
+                            Serves: {{ recipe.serves }}</li>
+                        <li class="list-group-item align-items-center">Difficulty: {{ recipe.difficulty }}</li>
+                        <li class="list-group-item align-items-center">Prep: {{ recipe.prep_time }} min</li>
+                        <li class="list-group-item align-items-center">Cook: {{ recipe.cook_time }} min</li>
+                        <li class="list-group-item align-items-center"><i class="fa-solid fa-heart"></i>
+                            {{ recipe.amount_of_likes }}
                         </li>
                     </ul>
-                  
+
                     <div class="card-footer">
-                        <a href="{% url 'recipe_detail' recipe.slug %}" class="btn">View
+                        <a href="{% url 'recipe_detail' recipe.slug %}" class="btn btn-recipe align-items-center">View
                             Recipe</a>
                     </div>
-                   
-                    
                 </div>
             </div>
         </div>
-              </div>
-            </div>
-          </div>
-
-          {% if forloop.counter|divisibleby:3 %}
-        </div>
-        <div class="row">
-            {% endif %}
-            {% endfor %}
-        </div>
-        <div class="row mt-3">
-            {% if is_paginated %}
-            <nav aria-label="Page Navigation">
-                <ul class="pagination justify-content-center">
-                    {% if page_obj.has_previous %}
-                    <li>
-                        <a href="?page={{ page_obj.previous_page_number }}" class="page_link">&laquo;
-                            Previous</a>
-                    </li>
-                    {% endif %}
-                    {% if page_obj.has_next %}
-                    <li>
-                        <a href="?page={{ page_obj.next_page_number }}" class="page_link">Next &raquo;</a>
-                    </li>
-                    {% endif %}
-                </ul>
-            </nav>
-            {% endif %}
-        </div>
     </div>
-{% endblock %}
 
-  </main>
+    {% if forloop.counter|divisibleby:3 %}
+    </div>
+    <div class="row">
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="row mt-3">
+        {% if is_paginated %}
+        <nav aria-label="Page Navigation">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                <li>
+                    <a href="?page={{ page_obj.previous_page_number }}" class="page_link">&laquo;
+                        Previous</a>
+                </li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                <li>
+                    <a href="?page={{ page_obj.next_page_number }}" class="page_link">Next &raquo;</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
+    </div>
+    {% endblock %}
+
+</main>

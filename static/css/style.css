@@ -81,6 +81,8 @@
   .lettuce-text {
     color: #00803f;
     font-size: 4rem;
+    margin-top: 15px;
+    margin-bottom: 25px;
   }
 
   .text-container {
@@ -99,8 +101,20 @@
     height: 6px;
   }
 
-  .link {
+  .link, .leaf {
     color: #00803f;
+  }
+
+  .leaf-orange {
+    color: #F3722C;
+  }
+
+  .more-about {
+    margin-top: 30px;
+  }
+
+  .salad-quote {
+    margin-top: 75px;
   }
 
 /*
@@ -192,4 +206,8 @@
 .btn-signup:active {
 	position: relative;
 	top: 1px;
+}
+
+.yellow-box {
+  background-color: #fcdb5e;
 }

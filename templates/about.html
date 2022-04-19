@@ -8,25 +8,59 @@
 
 
 {% block content %}
-<section class="vh-100">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-md-12 col-xl-5">
+<section class="main-content">
+  <div class="container">
+    <div class="about">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="about-img">
+            {% load static %}
+            <img class="img-fluid" src="{% static 'site_images/salad-geeb6f4120_1920.jpg' %}" alt="Plate of salad">
+          </div>
+        </div>
 
-        <figure class="bg-light p-4" style="border-left: .35rem solid #fcdb5e; border-top: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+        <div class="col-md-7">
+          <div class="about-content">
+            <h2 class="lettuce-text">Why salad?</h2>
+            <p><span class="leaf-orange"><i class="fas fa-seedling"></i></span>Salads can be a fun, colourful, healthy and tasty meal. They can be hot, or cold, savoury or sweet.  If you don't like salad, it's because you've not found the right one for you yet!</p>
+            <p><span class="leaf-orange"><i class="fas fa-seedling"></i></span>For example, have you ever tried a watermelon and feta salad?  Or an Aussie Christmas salad with strawberries and avocado?</p>
+            <P><span class="leaf-orange"><i class="fas fa-seedling"></i></span>How about spicy shrimp salad with pink grapefruit and sesame seeds?</p>
+            <p><span class="leaf-orange"><i class="fas fa-seedling"></i></span>Please explore all the different recipes in our blog.</p>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <figure class="bg-light p-4 salad-quote"
+          style="border-left: .35rem solid #fcdb5e; border-top: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
           <i class="fas fa-quote-left fa-2x mb-4" style="color: #fcdb5e;"></i>
           <blockquote class="blockquote pb-2">
             <p>
-                A mixture of uncooked vegetables, usually including lettuce, eaten either as a separate dish or with other food.  
+              A mixture of uncooked vegetables, usually including lettuce, eaten either as a separate dish or with other
+              food.
             </p>
           </blockquote>
           <figcaption class="blockquote-footer mb-0">
-            Dictionary Definition of Salad <cite title="Source Title"><a href="https://dictionary.cambridge.org/dictionary/english/salad">Cambridge Dictionary</a></cite>
+            Dictionary Definition of Salad <cite title="Source Title"><a
+                href="https://dictionary.cambridge.org/dictionary/english/salad">Cambridge Dictionary</a></cite>
           </figcaption>
         </figure>
-
+        </div>
+        <div class="col-md-7">
+          <div class="more-about">
+            <h3 class="dancing-text">Fun Facts about Salad</h3>
+            <p><span class="leaf"><i class="fas fa-seedling"></i></span>In ancient Egypt, lettuce was sacred to the fertility god Min and considered to be a powerful
+              aphrodisiac. The first representation of salad appeared in painings on Egyptian tombs in 4500 BC.</p>
+            <p><span class="leaf"><i class="fas fa-seedling"></i></span>Lettuce was first eaten by the ancient kings of Persian, 2500 years ago.</p>
+            <p><span class="leaf"><i class="fas fa-seedling"></i></span>The ancient Greeks and Romans thought it helped you to have a good night's sleep.</p>
+            <p><span class="leaf"><i class="fas fa-seedling"></i></span>The lettuce we see today actually started out as a weed around the Mediterranean basin.</p>
+            <p><span class="leaf"><i class="fas fa-seedling"></i></span>Christopher Columbus introduced lettuce to the new world and from there lettuce in the USA began to be
+              cultivated.</p>
+            <p><span class="leaf"><i class="fas fa-seedling"></i></span>Salad comes from the Latin word “herba salta” or “salted herbs,” so called because such greens were
+              usually seasoned with dressings containing lots of salt.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-    {% endblock %}
+
+{% endblock %}

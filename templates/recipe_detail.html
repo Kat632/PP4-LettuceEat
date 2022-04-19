@@ -10,141 +10,142 @@
 
 <!-- Main Content -->
 {% block content %}
-<main role="main">
 
-    <!-- Page content-->
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-8">
-                <!-- Post content-->
-                <article>
-                    <!-- Post header-->
-                    <header class="mb-4">
-                        <!-- Post title-->
-                        <h1 class="fw-bolder mb-1 lettuce-text">{{ recipe.title }}</h1>
-                        <!-- Post meta content-->
-                        <div class="text-muted fst-italic mb-2">
-                            <p>Recipe created on: {{ recipe.created_on }}, by {{ recipe.author }}. Recipe last updated:
-                                {{ recipe.last_updated }}</p>
-                        </div>
-                    </header>
-                    <div class="container">
-                        <!-- Preview image figure-->
-                        <figure class="mb-4">
-                            {% if "placeholder" in recipe.featured_image.url %}
-                            <img src="{% static 'site_imgs/salad-g46be2ceac_1920' %}" alt="Bowl of salad"
-                                id="recipe-image" class="img-fluid rounded">
-                            {% else %}
-                            <img id="recipe-image" src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
-                            {% endif %}
-                        </figure>
-
-                        <!-- Side widgets-->
-                        <div class="col-lg-4">
-                            <!-- Categories widget-->
-                            <div class="card mb-4">
-                                <div class="card-header">Details</div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <ul class="list-unstyled mb-0">
-                                                <li class="list-group-item">Serves: {{ recipe.serves }}</li>
-                                                <li class="list-group-item">Difficulty: {{ recipe.difficulty }}</li>
-                                                <li class="list-group-item">Prep: {{ recipe.prep_time }} min</li>
-                                                <li class="list-group-item">Cook: {{ recipe.cook_time }} min</li>
-                                                <li class="list-group-item">
-                                                    {% if user.is_authenticated %}
-                                                    <form id="like_form" action="{% url 'recipe_like' recipe.slug %}"
-                                                        class="d-inline" method="POST">
-                                                        {% csrf_token %}
-                                                        {% if liked %}
-                                                        <button type="submit" name="recipe_id" value="{{ recipe.slug }}"
-                                                            class="btn btn-signup btn-md"><i class="fas fa-heart"></i>
-                                                            {{ recipe.amount_of_likes }} </button>
-                                                        {% else %}
-                                                        <button type="submit" name="recipe_id" value="{{ recipe.slug }}"
-                                                            class="btn btn-md"><i class="far fa-heart"></i>
-                                                            {{ recipe.amount_of_likes }}</button>
-                                                        {% endif %}
-                                                        {% endif %}
-                                                    </form>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Side widget-->
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    <h3>Ingredients</h3>
-                                </div>
-                                <div class="card-body">{{ recipe.ingredients | safe }}</div>
-                            </div>
-                        </div>
-                    </div>
-
-                            <!-- Recipe content-->
-                            <section class="row mb-5">
-                                <div class="fs-5 mb-4">
-                                    <h3>Method</h3>
-                                    <p>{{ recipe.method | safe }}</p>
-                                </div>
-                            </section>
-                </article>
-
-                <div class="col mt-2 mb-3">
-                    {% if user.id == recipe.author.id %}
-                    <a href="{% url 'edit_recipe' recipe.slug %}" class="edit"><button class="btn btn-signup btn-md"
-                        value="{{ recipe.slug }}" type="button">Edit</button></a>
-                    <a href="{% url 'delete_recipe' recipe.slug %}" class="delete"><button
-                        class="btn btn-danger btn-md mx-4" value="{{ recipe.slug }}" type="button">Delete</button></a>
-                    {% endif %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Post header-->
+            <header class="mb-4">
+                <!-- Post title-->
+                <h1 class="fw-bolder mb-1 lettuce-text">{{ recipe.title }}</h1>
+                <!-- Post meta content-->
+                <div class="text-muted fst-italic mb-2">
+                    <p>Recipe created on: {{ recipe.created_on }}, by {{ recipe.author }}. Recipe last updated:
+                        {{ recipe.last_updated }}</p>
                 </div>
-
-            <!-- Comments section-->
-            <section class="mb-5">
-                <div class="card bg-light">
-                    <div class="card-body">
-                        <h3>Comments</h3>
-                        <!-- Single comment-->
-                        {% for comment in comments %}
-                        <div class="d-flex">
-                            <div class="ms-3">
-                                <div class="fw-bold">{{ comment.name }}, created a comment on {{ comment.created_on }}
-                                </div>
-                                <p>{{ comment.body | linebreaks }}</p>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
-
-                    <!-- Comment form-->
-
-                    {% if commented %}
-                    <div class="alert alert-success" role="alert">
-                        Thank you! Your comment will appear once approved.
-                    </div>
-                    {% else %}
-
-                    {% if user.is_authenticated %}
-                    <p>Posting as {{ user.username }}</p>
-
-                    <form method="post" class="mb-4">
-                        {{ comment_form | crispy }}
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-                    </form>
-                    {% endif %}
-                    {% endif %}
+            </header>
+            <div class="container">
+                <!-- Preview image figure-->
+                <div class="row">
+                    <figure class="mb-5">
+                        {% if "placeholder" in recipe.featured_image.url %}
+                        <img src="{% static 'site_imgs/salad-g46be2ceac_1920' %}" alt="Bowl of salad" id="recipe-image"
+                            class="img-fluid rounded">
+                        {% else %}
+                        <img id="recipe-image" src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
+                        {% endif %}
+                    </figure>
                 </div>
-            </section>
+            </div>
         </div>
+
+            <!-- Side widgets-->
+            <div class="col-lg-4">
+                <div class="row">
+                    <!-- Categories widget-->
+                    <div class="card mt-4 mb-4">
+                        <div class="card-header">
+                            <h3 class="dancing-text">Details</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="list-group-item">Serves: {{ recipe.serves }}</li>
+                                        <li class="list-group-item">Difficulty: {{ recipe.difficulty }}</li>
+                                        <li class="list-group-item">Prep: {{ recipe.prep_time }} min</li>
+                                        <li class="list-group-item">Cook: {{ recipe.cook_time }} min</li>
+                                        <li class="list-group-item">
+                                            {% if user.is_authenticated %}
+                                            <form id="like_form" action="{% url 'recipe_like' recipe.slug %}"
+                                                class="d-inline" method="POST">
+                                                {% csrf_token %}
+                                                {% if liked %}
+                                                <button type="submit" name="recipe_id" value="{{ recipe.slug }}"
+                                                    class="btn btn-md"><i class="fas fa-heart"></i>
+                                                    {{ recipe.amount_of_likes }} </button>
+                                                {% else %}
+                                                <button type="submit" name="recipe_id" value="{{ recipe.slug }}"
+                                                    class="btn btn-md"><i class="far fa-heart"></i>
+                                                    {{ recipe.amount_of_likes }}</button>
+                                                {% endif %}
+                                                {% endif %}
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side widget-->
+                <div class="row">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h3 class="dancing-text">Ingredients</h3>
+                        </div>
+                        <div class="card-body">{{ recipe.ingredients | safe }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recipe content-->
+        <section class="row mb-5">
+            <div class="fs-5 mb-4">
+                <h3 class="dancing-text">Method</h3>
+                <p>{{ recipe.method | safe }}</p>
+            </div>
+        </section>
+
+        <div class="col mt-2 mb-3">
+            {% if user.id == recipe.author.id %}
+            <a href="{% url 'edit_recipe' recipe.slug %}" class="edit"><button class="btn btn-signup btn-md"
+                    value="{{ recipe.slug }}" type="button">Edit</button></a>
+            <a href="{% url 'delete_recipe' recipe.slug %}" class="delete"><button class="btn btn-danger btn-md mx-4"
+                    value="{{ recipe.slug }}" type="button">Delete</button></a>
+            {% endif %}
+        </div>
+
+        <!-- Comments section-->
+        <section class="mb-5">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <h3>Comments</h3>
+                    <!-- Single comment-->
+                    {% for comment in comments %}
+                    <div class="d-flex">
+                        <div class="ms-3">
+                            <div class="fw-bold">{{ comment.name }}, created a comment on {{ comment.created_on }}
+                            </div>
+                            <p>{{ comment.body | linebreaks }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Comment form-->
+
+                {% if commented %}
+                <div class="alert alert-success" role="alert">
+                    Thank you! Your comment will appear once approved.
+                </div>
+                {% else %}
+
+                {% if user.is_authenticated %}
+                <p>Posting as {{ user.username }}</p>
+
+                <form method="post" class="mb-4">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                {% endif %}
+                {% endif %}
+            </div>
+        </section>
     </div>
+</div>
 
-    {% endblock %}
-
-</main>
-
-</html>
+{% endblock %}

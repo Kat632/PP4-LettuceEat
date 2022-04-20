@@ -1,61 +1,37 @@
-:root {
-    --jumbotron-padding-y: 3rem;
-  }
-  
-  .jumbotron {
-    padding-top: var(--jumbotron-padding-y);
-    padding-bottom: var(--jumbotron-padding-y);
-    margin-bottom: 0;
-    background-color: #fff;
-  }
-  @media (min-width: 768px) {
-    .jumbotron {
-      padding-top: calc(var(--jumbotron-padding-y) * 2);
-      padding-bottom: calc(var(--jumbotron-padding-y) * 2);
-    }
-  }
-  
-  .jumbotron p:last-child {
-    margin-bottom: 0;
-  }
-  
-  .jumbotron-heading {
-    font-weight: 300;
-  }
-  
-  .jumbotron .container {
-    max-width: 40rem;
-  }
-  
-  footer {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-  
-  footer p {
-    margin-bottom: .25rem;
-  }
-  
-  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
 
-  h1, h2, h4, h5 {
-    font-family: 'Poppins', sans-serif;
-  }
+footer p {
+  margin-bottom: .25rem;
+}
 
-  h3 {
-    font-family: 'Dancing Script', cursive;
-  }
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
 
-  p {
-    font-family: 'Poppins', sans-serif;
-  }
+h1,
+h2,
+h4,
+h5 {
+  font-family: 'Poppins', sans-serif;
+}
 
-  .lettuce-eat {
-    font-family: 'Dancing Script', cursive;
-  }
+h3 {
+  font-family: 'Dancing Script', cursive;
+}
 
-  .header-image {
-    position: relative;
+p {
+  font-family: 'Poppins', sans-serif;
+}
+
+.lettuce-eat {
+  font-family: 'Dancing Script', cursive;
+}
+
+.header-image {
+  position: relative;
 }
 
 #recipe-image {
@@ -71,141 +47,148 @@
 }
 
 .caption {
-    position: absolute;
-    top: 45%;
-    left: 0;
-    width: 100%;
-    background-color: #F3722C;
-  }
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  background-color: #F3722C;
+}
 
-  .lettuce-text {
-    color: #00803f;
-    font-size: 4rem;
-    margin-top: 15px;
-    margin-bottom: 25px;
-  }
+.lettuce-text {
+  color: #00803f;
+  font-size: 4rem;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
 
-  .text-container {
-    padding: 25px;
-  }
+.text-container {
+  padding: 25px;
+}
 
-  .dancing-text {
-    font-family: 'Dancing Script', cursive;
-    color: #00803f;
-  }
-  
-  .orange-rule {
-    color: #F3722C;
-    margin-left: 30%;
-    margin-right: 30%;
-    height: 6px;
-  }
+.dancing-text {
+  font-family: 'Dancing Script', cursive;
+  color: #00803f;
+}
 
-  .link, .leaf {
-    color: #00803f;
-  }
+.orange-rule {
+  color: #F3722C;
+  margin-left: 30%;
+  margin-right: 30%;
+  height: 6px;
+}
 
-  .leaf-orange {
-    color: #F3722C;
-  }
+.link,
+.leaf {
+  color: #00803f;
+}
 
-  .more-about {
-    margin-top: 30px;
-  }
+.leaf-orange {
+  color: #F3722C;
+}
 
-  .salad-quote {
-    margin-top: 75px;
-  }
+.more-about {
+  margin-top: 30px;
+}
+
+.salad-quote {
+  margin-top: 75px;
+}
 
 /*
  BUTTON STYLING
 */
 
 .btn-signup {
-	box-shadow: inset 0px 0px 0px 0px #a4e271;
-	background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
-	background-color: #00803f;
-	border-radius: 6px;
-	border: 1px solid #74b807;
-	display: inline-block;
-	cursor: pointer;
-	color: #ffffff;
-	font-family: 'Poppins', sans-serif;
-	font-size: 1rem;
-	font-weight: bold;
+  box-shadow: inset 0px 0px 0px 0px #a4e271;
+  background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+  background-color: #00803f;
+  border-radius: 6px;
+  border: 1px solid #74b807;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
   width: 144px;
   height: 60px;
-	padding: 10px 10px;
+  padding: 10px 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-	text-decoration: none;
-	text-shadow: 0px 2px 0px #528009;
+  text-decoration: none;
+  text-shadow: 0px 2px 0px #528009;
 }
+
 .btn-signup:hover {
-	background: linear-gradient(to bottom, #77a809 5%, #89c403 100%);
-	background-color: #77a809;
+  background: linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+  background-color: #77a809;
 }
+
 .btn-signup:active {
-	position: relative;
-	top: 1px;
+  position: relative;
+  top: 1px;
 }
 
 .btn-danger {
-	box-shadow:inset 0px 1px 0px 0px #f29c93;
-	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
-	background-color:#fe1a00;
-	border-radius:6px;
-	border:1px solid #d83526;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family: 'Poppins', sans-serif;
-	font-size:1rem;
-	font-weight:bold;
+  box-shadow: inset 0px 1px 0px 0px #f29c93;
+  background: linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+  background-color: #fe1a00;
+  border-radius: 6px;
+  border: 1px solid #d83526;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
   width: 144px;
   height: 60px;
-	padding: 10px 10px;
+  padding: 10px 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #b23e35;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #b23e35;
 }
+
 .brn-danger:hover {
-	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
-	background-color:#ce0100;
+  background: linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+  background-color: #ce0100;
 }
+
 .brn-danger:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
 
 .btn-recipe {
-	box-shadow: inset 0px 0px 0px 0px #a4e271;
-	background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
-	background-color: #00803f;
-	border-radius: 6px;
-	border: 1px solid #74b807;
-	display: inline-block;
-	cursor: pointer;
-	color: #ffffff;
-	font-family: 'Poppins', sans-serif;
-	font-size: 1rem;
-	font-weight: bold;
+  box-shadow: inset 0px 0px 0px 0px #a4e271;
+  background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+  background-color: #00803f;
+  border-radius: 6px;
+  border: 1px solid #74b807;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
   width: 150px;
   height: 44px;
-	padding: 10px 10px;
+  padding: 10px 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-	text-decoration: none;
-	text-shadow: 0px 2px 0px #528009;
+  text-decoration: none;
+  text-shadow: 0px 2px 0px #528009;
 }
+
 .btn-signup:hover {
-	background: linear-gradient(to bottom, #77a809 5%, #89c403 100%);
-	background-color: #77a809;
+  background: linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+  background-color: #77a809;
 }
+
 .btn-signup:active {
-	position: relative;
-	top: 1px;
+  position: relative;
+  top: 1px;
 }
 
 .yellow-box {

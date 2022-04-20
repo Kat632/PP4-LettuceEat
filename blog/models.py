@@ -27,8 +27,8 @@ class Recipe(models.Model):
     difficulty = models.IntegerField(choices=LEVEL, default=0)
     serves = models.IntegerField(default=1)
     cook_time = models.IntegerField(default=0)
-    ingredients = SummernoteTextField()
-    method = SummernoteTextField()
+    ingredients = models.TextField()
+    method = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
     likes = models.ManyToManyField(
         User,

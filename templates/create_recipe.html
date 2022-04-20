@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load cloudinary %}
+{% load active_link_tags %}
 {% load crispy_forms_tags %}
 {% load static %}
 
@@ -21,35 +22,35 @@
                     <div class="col">
                         {% csrf_token %}
                         <div class="row">
-                                {{ recipe_form.title|as_crispy_field }}
+                                {{ recipe_form.title | as_crispy_field | safe }}
                         </div>
                         <div class="row">
-                            {{ recipe_form.excerpt|as_crispy_field }}
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                {{ recipe_form.prep_time|as_crispy_field }}
-                            </div>
-                            <div class="col-6">
-                                {{ recipe_form.difficulty|as_crispy_field }}
-                            </div>
+                            {{ recipe_form.excerpt | as_crispy_field | safe }}
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                {{ recipe_form.serves|as_crispy_field }}
+                                {{ recipe_form.prep_time|as_crispy_field | safe }}
                             </div>
                             <div class="col-6">
-                                {{ recipe_form.cook_time|as_crispy_field }}
+                                {{ recipe_form.difficulty|as_crispy_field | safe }}
                             </div>
                         </div>
                         <div class="row">
-                            {{ recipe_form.ingredients|as_crispy_field }}
+                            <div class="col-6">
+                                {{ recipe_form.serves|as_crispy_field | safe }}
+                            </div>
+                            <div class="col-6">
+                                {{ recipe_form.cook_time|as_crispy_field | safe }}
+                            </div>
                         </div>
                         <div class="row">
-                            {{ recipe_form.method|as_crispy_field }}
+                            {{ recipe_form.ingredients|as_crispy_field | safe }}
                         </div>
                         <div class="row">
-                            {{ recipe_form.featured_image|as_crispy_field }}
+                            {{ recipe_form.method|as_crispy_field | safe }}
+                        </div>
+                        <div class="row">
+                            {{ recipe_form.featured_image|as_crispy_field | safe }}
                         </div>
                         <button type="submit" class="btn btn-signup btn-lg">Submit</button>
                     </div>

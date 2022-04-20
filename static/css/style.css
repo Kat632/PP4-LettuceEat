@@ -52,6 +52,10 @@ p {
   margin-bottom: 25px;
 }
 
+.orange-text {
+  color: #F3722C;
+}
+
 .text-container {
   padding: 25px;
 }
@@ -65,7 +69,7 @@ p {
   color: #F3722C;
   margin-left: 30%;
   margin-right: 30%;
-  height: 6px;
+  height: 30px;
 }
 
 .link,
@@ -78,11 +82,11 @@ p {
 }
 
 .more-about {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .salad-quote {
-  margin-top: 75px;
+  margin-top: 105px;
 }
 
 /*

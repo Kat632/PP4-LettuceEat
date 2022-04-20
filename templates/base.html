@@ -82,16 +82,46 @@
     </main>
 
      <!-- Footer -->
-    <footer class="footer mt-auto py-3 bg-light">
-        <p class="m-0 text-center text-white">Made by Code Instituters</p>
-        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i></p>
+     <footer class="footer-16371">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-9 text-center">
+            <div class="footer-site-logo mb-2">
+              <a href="{% url 'home' %}">Lettuce Eat</a>
+            </div>
+            <ul class="list-unstyled nav-links mb-2">
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="{% url 'create_recipe' %}">Add Recipe</a></li>
+              {% if user.is_authenticated %}
+              <li><a href="{% url 'account_logout' %}">Logout</a></li>
+              {% else %}
+              <li><a href="{% url 'account_signup' %}">Register</a></li>
+              <li><a href="{% url 'account_login' %}">Login</a></li>
+              {% endif %}
+            </ul>
+
+            <div class="social mb-2">
+              <h3>Stay in touch</h3>
+              <ul class="list-unstyled">
+                <li class="in"><a href="#"><span><i class="fa-brands fa-linkedin fa-2x"></i></span></a></li>
+                <li class="fb"><a href="#"><span><i class="fa-brands fa-twitter fa-2x"></i></span></a></li>
+                <li class="tw"><a href="#"><span><i class="fa-brands fa-github fa-2x"></i></span></a></li>
+              </ul>
+            </div>
+
+            <div class="copyright">
+              <p class="mb-0"><small>&copy; Katherine Biggs. All Rights Reserved.</small></p>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
     </footer>
 
+
   </body>
-  
+
   <script>
     initSummernote();
   </script>

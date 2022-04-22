@@ -72,23 +72,6 @@ p {
   height: 30px;
 }
 
-.link,
-.leaf {
-  color: #00803f;
-}
-
-.leaf-orange {
-  color: #F3722C;
-}
-
-.more-about {
-  margin-top: 50px;
-}
-
-.salad-quote {
-  margin-top: 105px;
-}
-
 /*
  BUTTON STYLING
 */
@@ -240,3 +223,44 @@ footer a {
       color: #F3722C; }
   .footer-16371 .copyright {
     color: #000; }
+
+/*
+ABOUT PAGE
+*/
+
+.about-page {
+    list-style: none;
+    padding: 0;
+}
+
+.fun-facts:before {
+  content: "\f4d8";
+  color:#00803f;
+  font-family: FontAwesome;
+  font-size: 1.25rem;
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.3em;
+}
+
+.why-salad:before {
+  content: "\f4d8";
+  color: #f3722c;
+  font-family: FontAwesome;
+  font-size: 1.25rem;
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.3em;
+}
+
+.link {
+  color: #00803f;
+}
+
+.more-about {
+  margin-top: 50px;
+}
+
+.salad-quote {
+  margin-top: 105px;
+}

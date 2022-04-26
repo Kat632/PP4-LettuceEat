@@ -1,8 +1,8 @@
-# Student Rations
+# Lettuce Eat
 
 ![Lettuce Eat - Responsive](#)
 
-[View the live project here](# "Link to deployed link - Lettuce Eat")
+[View the live project here](# "Link to deployed site - Lettuce Eat")
 
 ## Table of contents
 1. [Introduction](#Introduction)
@@ -58,13 +58,13 @@ My project is a recipe blog dedicated to salad, called Lettuce Eat.  Users can r
 
 5.  As a **user** I can **create my own account** so that **I can comment and like recipes**.
 
-6.  As a **logged-in user** I can **submit my own recipes** so that **I can share them on the site too**.
+6.  As a **user** I can **navigate around the site** so that **I can choose the things I want to read**.
 
-7.  As a **logged-in user** I can **leave a comment on a recipe so that I can share my thoughts and results with other people**.
+7.  As a **logged-in user** I can **submit my own recipes** so that **I can share them on the site too**.
 
-8.  As a **logged-in user** I can **like or unlike a recipe** so that **I can help other users to find out if a recipe is popular**.
+8.  As a **logged-in user** I can **leave a comment on a recipe so that I can share my thoughts and results with other people**.
 
-9.  As a **user** I can **navigate around the site** so that **I can choose the things I want to read**.
+9.  As a **logged-in user** I can **like or unlike a recipe** so that **I can help other users to find out if a recipe is popular**.
 
 10. As a **logged-in user** I can **click a button** so that **I can edit a recipe I have previously submitted**.
 
@@ -78,7 +78,7 @@ My project is a recipe blog dedicated to salad, called Lettuce Eat.  Users can r
 3. As a **Site Admin** I can **approve or deny comments that have been left by other people before they are published** so that **I can filter out unwanted or irrelevant comments**.
 
 ### Development Planes
-To create a comprehensive and appealing website, the developer researched other recipe based websites to discover what features and functionality would be required. This information created the above user stories and is developed further below.
+To create a comprehensive and appealing website, I researched other recipe based websites to discover what features and functionality would be required. This information created the above user stories and is developed further below.
 
 #### Strategy
 Broken into three categories, the website will attempt to focus on the following target audiences:
@@ -95,7 +95,7 @@ Broken into three categories, the website will attempt to focus on the following
 - **Psychographics:**
      - Personality & Attitudes:
         - Creative
-	- Healthy
+	     - Healthy
 
      - Values:
         - Interested in trying different things
@@ -103,7 +103,7 @@ Broken into three categories, the website will attempt to focus on the following
         - Anyone interested in healthy, homemade food
 
 The website needs to enable the **user** to:
-- search for recipes.
+- browse the recipes.
 - comment on and like recipes.
 - register and log in to enable them to upload their recipes.
 
@@ -131,31 +131,26 @@ A scope was defined to identify what needed to be done to align features with th
 	    - Upload images in the comments section to show their results of trying the recipe.
 
 #### Structure
-The information architecture was organized in a hierarchical tree structure to ensure that users could navigate through the site with ease and efficiency, with the following results
-![Home Page Wireframe](static/media/README/site-map.png 'Site Map')
+The information architecture was organized in such a way as to ensure that users can navigate through the site easily.
+![Site Map structure](static/site_images/readme/sitemap_p4.png 'Site Map')
 
-ERD!
+Entity Relationship Diagram for the database models.
+![ERD structure](static/site_images/readme/erd_lettuce_eat.png 'Entity Relationship Diagram')
 
 #### Skeleton 
-Wireframe mockups were created using [Balsamiq](https://balsamiq.com/ 'Balsamiq Website'), providing a positive user experience with the following results:
+Wireframe mockups were created using [Balsamiq](https://balsamiq.com/ 'Balsamiq Website').
 
 Home Page:
-![Home Page Wireframe](static/media/README/home-page-wireframe.png 'Home Page - Wireframe')
+![Home Page Wireframe](static/site_images/readme/home.png 'Home Page - Wireframe')
 
 About Page:
-![About Page Wireframe](static/media/README/about-page-wireframe.png 'About Page - Wireframe')
-
-Search Page:
-![Search Page Wireframe](static/media/README/search-page-wireframe.png 'Search Page - Wireframe')
+![About Page Wireframe](static/site_images/readme/about.png 'About Page - Wireframe')
 
 Recipe Page:
-![Recipe Page Wireframe](static/media/README/recipe-page-wireframe.png 'Recipe Page - Wireframe')
+![Recipe Page Wireframe](static/site_images/readme/recipe_view.png 'Recipe Page - Wireframe')
 
-Recipe Page:
-![Create/Edit Recipe Page Wireframe](static/media/README/create-edit-recipe-page-wireframe.png 'Create/Edit Recipe Page - Wireframe')
-
-Favourites Page:
-![Favourites Page Wireframe](static/media/README/favourites-page-wireframe.png 'Favourites Page - Wireframe')
+Create/Edit Recipe Page:
+![Create/Edit Recipe Page Wireframe](static/site_images/readme/create.png 'Create/Edit Recipe Page - Wireframe')
 
 ### Design
 
@@ -169,14 +164,14 @@ The Lettuce Eat logo was made with [Canva](https://www.canva.com/ 'Canva website
 
 #### Typography
 
-The font chosen for the logo was Dancing Script as it is elegant and classic.  The font has aslo been used throughout the website for sub-headings, to add some differentiation from the main font of the site. All instances of Dancing Script have also been styled green to make them stand out against the white background of the site.
+The font chosen for the logo was Dancing Script as it is elegant and classic.  The font has also been used throughout the website for sub-headings, to add some differentiation from the main font of the site. All instances of Dancing Script have also been styled green to make them stand out against the white background of the site.
 
 The main font of the website is Poppins, which has been used for large headings, as well as all other text.  Poppins is a popular, versatile font and it ensures that the most important information on the site is readable.
 
 Both fonts were chosen from [Google Fonts](https://fonts.google.com/ 'Google Fonts website')
 
 #### Imagery
-To match the colour scheme chosen, I chose an image of heads of lettuce for the hero image on the index page.  The site is called Lettuce Eat and therefore I didn't want to put a big image of a salad.  If the salad had ingredients in it that a user didn't like, there would be the potential of the user closing the site before scrolling down to the recipes.  That's why I thought it would be more fun to use the lettuce.
+To match the colour scheme chosen, I chose an image of heads of lettuce for the hero image on the index page.  The site is called Lettuce Eat and therefore I didn't want to put a big image of a salad.  If the salad had ingredients in it that a user didn't like, there would be the potential of the user closing the site before scrolling down to the recipes.  That's why I thought it would be more fun to use the lettuce and have it tie in with the site name.
 
 On each recipe page, an image of the finished meal is shown with the recipe to allow the user to visualise the end product.
 
@@ -299,14 +294,20 @@ Each page of the website features a consistent responsive navigational system:
 - **Saving Drafts to a Profile Page**
      - **Feature** - This feature would have allowed users to create a draft of a recipe which would be saved on a profile page which would allow them to complete the draft at a later date and release the recipe onto the site.
      - **Reason for not featuring in this release** - Once again, the developer ran out of time to implement this feature before the project's due date. This will also be developed further in the future after grading is complete.
+- **Search Recipes**
+     - **Feature** - This feature would have allowed users to search recipes, either by typing the name of a recipe, or searching for a specific category of recipes e.g. Vegan.
+     - **Reason for not featuring in this release** - Once again, the developer ran out of time to implement this feature before the project's due date. This will also be developed further in the future after grading is complete.
+- **Categorise Recpies**
+     - **Feature** - Recipes could be organised into categories, thus enabling users to search by categories.
+     - **Reason for not featuring in this release** - In hindsight, this would have been very easy to implement at the beginning of the project when I was designing the models.  I will include this in the future, after grading is complete.
+
  
 [Back to top ⇧](#Lettuce-Eat)
 
 ## Issues and Bugs 
-Sample text about bugs
 
-**Bug** - The developer initially thought that since Summernote worked on the admin page, it would work on the main site also. The developer was relying on Summernote being available on the recipe form as it would allow the user to create ordered and unordered lists for steps and ingredients. 
-- ***Solution***: The developer inspected all summernote documentation, on both their site and GitHub page. After discussing the issue with tutor support, it was found that the summernote documentation was lacking in information, focussing mostly on admin implementation. Tutor support was able to provide information regarding settings to be implemented as well as add the correct JS script at the bottom of the required pages. With the recommended in place, the summernote feature was working on the create/edit recipe pages and was able to be styled by the developer.
+**Bug** - I initially thought that since Summernote worked on the admin page, it would work on the main site also. Once I had implemented the form to add a recipe, it became apparent that I needed to find a solution to allow the user to create ordered and unordered lists for steps and ingredients.  Without this feature, the recipes would appear as an unformatted block of text. 
+- ***Solution***: I looked at all the Summernote documentation on both their site and GitHub page. The Summernote text fields appeared on the create and edit recipe pages, but then the recipe would not save.  After discussing the issue with Andrew Dempsey, we discovered that the Summernote documentation was lacking in information, focussing mostly on admin implementation. The relevant code that I needed to put in was at the bottom of Summernote's readme on GitHub, in a section called 'Options'.  I worked through the information regarding settings and the forms then began to work correctly and the text is now able to be styled by the user.
 
 **Bug** - The developer found a bug that caused an error if two recipes were added with the same name. This was caused by the slugs, created at the time the recipe was submitted, which were identical meaning the site could not differentiate which recipe was to be opened.
 - ***Solution***: The developer created a function that checked if the slug was already created. If so, a series of four randomly generated characters would be added to the end of the slug, creating a unique slug for each recipe.
@@ -326,7 +327,7 @@ Sample text about bugs
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript "Link to JavaScript Wiki")
      - Used to implement the Summernote feature that allowed the user to add styling to the recipe in the form.
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Link to Python Wiki")
-     - Used to implement Django functionality, including building models, forms and views for our app.
+     - Used to implement Django functionality, including building models, forms and views for the app.
 
 ### Frameworks, Libraries & Programs Used
 - [Django](https://www.djangoproject.com/ "Link to Django Project website")
@@ -337,7 +338,7 @@ Sample text about bugs
      - Cloudinary was used as free cloud storage for images uploaded to the site through the recipe forms.
 - [Summernote](https://summernote.org "Link to Summernote page")
      - Summernote was used to allow users to add styling when adding a recipe to the site. This is particularly useful for using bullet points for ingredients or numbering the steps for the recipe.
--[Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/ "Link to the Crispy Forms documentation.
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/ "Link to the Crispy Forms documentation.
     - Crispy Forms was used to style the add and edit recipe forms, allowing more than one field to occupy a line on the form.
 - [Google Fonts](https://fonts.google.com/ "Link to Google Fonts")
     - Google fonts were used to import the fonts "Roboto" and "Open Sans" into the style.css file. These fonts were used throughout the project.
@@ -441,8 +442,6 @@ Further reading and troubleshooting on cloning a repository from GitHub [here](h
 
 - The Fun Facts about Salad on the About page, plus the quote were taken from [Love My Salad](https://www.lovemysalad.com/ "Link to Love my Salad website").
 
-- All other content has been written by the developer.
-
 ### Media
 - The images have been sourced from the [Pixabay](https://pixabay.com/) by the developer.  It was quite difficult to find free pictures of salad that fit with the recipes I wanted to include.
 
@@ -454,6 +453,10 @@ References used:
 - [Django Docs](https://docs.djangoproject.com/en/3.2/ "Link to Django's Docs for Version 3.2")
 - [Summernote GitHub Docs](https://github.com/summernote/summernote, "Link to Summernote's GitHub page")
 - [Cripsy Forms Docs](https://django-crispy-forms.readthedocs.io/en/latest/ "Link to Crispy Forms documentation")
+
+### Other
+- [Visio](https://www.microsoft.com/en-gb/microsoft-365/visio/flowchart-software "Link to Visio on Microsoft's website")
+     - Visio was used for the diagrams in this Readme document.
 
 [Back to top ⇧](#Lettuce-Eat)
 

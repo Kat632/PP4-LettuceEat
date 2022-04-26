@@ -217,10 +217,19 @@ footer a {
       padding: 10px; }
     .footer-16371 .social ul li.in a {
       color: #F3722C; }
+      .footer-16371 .social ul li.in a:hover {
+        color: #00803f;
+      }
     .footer-16371 .social ul li.tw a {
       color: #F3722C; }
+      .footer-16371 .social ul li.tw a:hover {
+        color: #00803f;
+      }
     .footer-16371 .social ul li.fb a {
       color: #F3722C; }
+      .footer-16371 .social ul li.fb a:hover {
+        color: #00803f;
+      }
   .footer-16371 .copyright {
     color: #000; }
 

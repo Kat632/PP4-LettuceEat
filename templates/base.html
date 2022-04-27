@@ -52,32 +52,32 @@
           </button>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <ul class="navbar-nav navbar-nav flex-row ml-md-auto d-md-flex">
             {% load active_link_tags %}
             <li class="nav-item active">
-              <a class="nav-link {% block active_home %}{% endblock %}" {% block aria_home %}{% endblock %} 
+              <a class="nav-link p-2{% block active_home %}{% endblock %}" {% block aria_home %}{% endblock %} 
               href="{% url 'home' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% block active_about %}{% endblock %}" {% block aria_about %}{% endblock %}
+              <a class="nav-link p-2{% block active_about %}{% endblock %}" {% block aria_about %}{% endblock %}
               href="{% url 'about' %}">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% block active_create %} {% endblock %}" {% block aria_create %}{% endblock %}
+              <a class="nav-link p-2{% block active_create %} {% endblock %}" {% block aria_create %}{% endblock %}
               href="{% url 'create_recipe' %}">Add Recipe</a>
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item active">
-              <a class="nav-link {% block active_logout %} {% endblock %}" {% block aria_logout %}{% endblock %}
+              <a class="nav-link p-2{% block active_logout %} {% endblock %}" {% block aria_logout %}{% endblock %}
               href="{% url 'account_logout' %}">Logout</a>
             </li>
             {% else %}
             <li class="nav-item">
-              <a class="nav-link {% block active_signup %} {% endblock %}" {% block aria_signup %}{% endblock %}
+              <a class="nav-link p-2{% block active_signup %} {% endblock %}" {% block aria_signup %}{% endblock %}
               href="{% url 'account_signup' %}">Register</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% block active_login %} {% endblock %}" {% block aria_login %}{% endblock %} 
+              <a class="nav-link p-2{% block active_login %} {% endblock %}" {% block aria_login %}{% endblock %} 
               href="{% url 'account_login' %}">Login</a>
             </li>
             {% endif %}

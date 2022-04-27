@@ -45,9 +45,13 @@ p {
   background-color: #F3722C;
 }
 
+.text-center {
+  position: relative;
+}
+
 .lettuce-text {
   color: #00803f;
-  font-size: 4rem;
+  font-size: 3rem;
   margin-top: 15px;
   margin-bottom: 25px;
 }
@@ -281,4 +285,23 @@ CREATE AND EDIT
 .yellow-box {
   background-color: #fcdb5e;
   padding: 15px;
+}
+
+/*
+MEDIA QUERIES
+*/
+@media screen and (max-width: 1080px) {
+  .lettuce-text {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .caption {
+    top: 48%;
+  }
+  
+  .lettuce-text {
+    font-size: 1.25rem;
+  }
 }

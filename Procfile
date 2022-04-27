@@ -1,1 +1,1 @@
-web: gunicorn lettuceeat.wsgi
+web: gunicorn lettuceeat.wsgi:application

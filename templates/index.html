@@ -26,7 +26,7 @@ aria-current="page" id="active-green"
     <div class="container-fluid">
         <div class="row gx-5 d-flex justify-content-center">
             {% load static %}
-            <img class="img-fluid header-image" src="{% static 'site_images/toinane-OpLaMhfqTwQ-unsplash.jpg' %}"
+            <img class="img-fluid header-image" src="{% static 'site_images/toinane_OpLaMhfqTwQ_unsplash.jpg' %}"
                 alt="lettuce background image">
             <div class="col-lg-6">
                 <div class="my-5 caption d-flex justify-content-center">
@@ -80,7 +80,7 @@ aria-current="page" id="active-green"
                 <div class="card box-shadow h-100">
                     {% if "placeholder" in recipe.featured_image.url %}
                     {% load static %}
-                    <img class="card-img-top" src="{% static 'site_images/salad-g46be2ceac_1920.jpg' %}"
+                    <img class="card-img-top" src="{% static 'site_images/salad_g46be2ceac_1920.jpg' %}"
                         alt="Bowl of salad">
                     {% else %}
                     <img class="card-img-top recipe-image" src="{{ recipe.featured_image.url }}"

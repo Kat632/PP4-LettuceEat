@@ -29,7 +29,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = 'DEVELOPMENT' in os.environ
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -48,10 +48,10 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'cloudinary_storage',
     'django.contrib.staticfiles',
-    'django_extensions',
+    'cloudinary_storage',
     'cloudinary',
+    'django_extensions',
     'django_summernote',
     'crispy_forms',
     'active_link',

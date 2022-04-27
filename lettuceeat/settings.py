@@ -33,7 +33,8 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['lettuce-eat-pp4.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['lettuce-eat-pp4.herokuapp.com', 'localhost']
 
 
 # Application definition

@@ -30,7 +30,7 @@
                 <div class="row">
                     <figure class="mb-5">
                         {% if "placeholder" in recipe.featured_image.url %}
-                        <img src="{% static 'site_imgs/salad-g46be2ceac_1920' %}" alt="Bowl of salad" id="recipe-image"
+                        <img src="{% static 'site_images/salad-g46be2ceac_1920.jpg' %}" alt="Bowl of salad" id="recipe-image"
                             class="img-fluid rounded">
                         {% else %}
                         <img id="recipe-image" src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }}">

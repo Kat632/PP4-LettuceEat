@@ -1,9 +1,23 @@
 {% extends "base.html" %}
 
+
 {% load i18n %}
 {% load account socialaccount %}
 
+
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+
+<!-- Navbar Active Link -->
+{% block active_login %}
+active
+{% endblock %}
+
+
+<!-- aria-current Attribute for active nav link -->
+{% block aria_login %}
+aria-current="page" id="active-green"
+{% endblock %}
 
 {% block content %}
 

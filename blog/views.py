@@ -100,6 +100,7 @@ class RecipeDetail(View):
                 "commented": False,
                 "liked": liked,
                 "comment_form": CommentForm(),
+                "recipe_form": RecipeForm(),
             },
         )
 

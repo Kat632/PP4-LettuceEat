@@ -1,14 +1,27 @@
 {% extends 'base.html' %}
 {% load active_link_tags %}
 
+
 <!-- Page Title -->
 {% block title %}
 <title>Lettuce Eat - Home</title>
 {% endblock %}
 
+
+<!-- Navbar Active Link -->
+{% block active_home %}
+active
+{% endblock %}
+
+
+<!-- aria-current Attribute for active nav link -->
+{% block aria_home %}
+aria-current="page" id="active-green"
+{% endblock %}
+
+
 <!-- Header Image -->
 {% block header %}
-<!-- Header-->
 <header class="bg-light py-5">
     <div class="container-fluid">
         <div class="row gx-5 justify-content-center">

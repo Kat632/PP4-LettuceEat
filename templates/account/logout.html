@@ -1,8 +1,23 @@
 {% extends "base.html" %}
 
+
 {% load i18n %}
 
+
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
+
+
+<!-- Navbar Active Link -->
+{% block active_logout %}
+active
+{% endblock %}
+
+
+<!-- aria-current Attribute for active nav link -->
+{% block aria_logout %}
+aria-current="page" id="active-green"
+{% endblock %}
+
 
 {% block content %}
 <div class="container">

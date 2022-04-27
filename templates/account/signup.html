@@ -1,8 +1,24 @@
 {% extends "base.html" %}
 
+
 {% load i18n %}
 
+
 {% block head_title %}{% trans "Signup" %}{% endblock %}
+
+
+<!-- Navbar Active Link -->
+{% block active_signup %}
+active
+{% endblock %}
+
+
+<!-- aria-current Attribute for active nav link -->
+{% block aria_signup %}
+aria-current="page" id="active-green"
+{% endblock %}
+
+
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="container">

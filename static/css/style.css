@@ -72,6 +72,11 @@ p {
   height: 30px;
 }
 
+#active-green {
+  font-weight: bold;
+  color: #00803f;
+}
+
 /*
  BUTTON STYLING
 */

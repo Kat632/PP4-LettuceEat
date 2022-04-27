@@ -29,13 +29,13 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
-# DEBUG = False
+# DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['lettuce-eat-pp4.herokuapp.com', 'localhost']
-
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['lettuce-eat-pp4.herokuapp.com', 'localhost']
 
 # Application definition
 
@@ -46,15 +46,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
     'django_extensions',
     'django_summernote',
     'crispy_forms',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'active_link',
     'coverage',
     'blog',

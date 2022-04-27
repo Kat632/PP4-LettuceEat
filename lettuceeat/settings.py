@@ -29,7 +29,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['lettuce-eat-pp4.herokuapp.com', 'localhost']
 
@@ -114,7 +116,7 @@ WSGI_APPLICATION = 'lettuceeat.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+  'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 

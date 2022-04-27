@@ -174,10 +174,6 @@ p {
   top: 1px;
 }
 
-.yellow-box {
-  background-color: #fcdb5e;
-}
-
 /*
  FOOTER
 */
@@ -277,4 +273,12 @@ ABOUT PAGE
 
 .salad-quote {
   margin-top: 105px;
+}
+
+/*
+CREATE AND EDIT
+*/
+.yellow-box {
+  background-color: #fcdb5e;
+  padding: 15px;
 }

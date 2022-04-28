@@ -298,7 +298,7 @@ CREATE AND EDIT
 MEDIA QUERIES
 */
 @media screen and (max-width: 1080px) {
-  .lettuce-text {
+  .black-lettuce-text {
     font-size: 2rem;
   }
 }
@@ -308,6 +308,6 @@ MEDIA QUERIES
     top: 48%;
   }
   
-  .lettuce-text {
+  .black-lettuce-text {
     font-size: 1.25rem;
   }

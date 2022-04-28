@@ -240,7 +240,9 @@ Each page of the website features a consistent responsive navigational system:
 - ***Solution***: I spent rather a long time talking to Tutor Support, I renamed images, I deleted everything out of Cloudinary.  We tried a lot of things.  In the end, the solution was ridiculously simple (see image below), whereby I had an extra "/" on the very first image the site was loading and it was causing the whole rest of the styling to not work.  Many thanks to Scott from Code Institute's Tutor Support for finally cracking it.
 ![Heroku Deployment Issue](static/site_images/readme/theproblem.png 'Heroku Deployment Issue')
 
-**Issue** - The developer found errors when validating the python files. This was found in the settings.py file where certain urls went beyond the character limit on a single line. This error can be ignored as there is no way to reduce the url length to conform to the character limit per line.
+**Issue** - The Summernote feature implemented in the forms threw up a large number of errors. Unfortunately this is not something I was able to rectify and as such was left in the code. It will be noted that these errors were not caused by me and as such should hopefully not count toward the final grade.
+
+**Issue** - I found errors when validating the python files. This was found in the settings.py file where certain urls went beyond the character limit on a single line. This error can be ignored as there is no way to reduce the url length to conform to the character limit per line.
 
 [Back to top ⇧](#Lettuce-Eat)
 

@@ -10,7 +10,7 @@ def about(request):
     renders about page
     """
     return render(request, "about.html")
-    
+
 
 def create_recipe(request):
     """
@@ -114,7 +114,7 @@ class RecipeDetail(View):
         liked = False
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True
-     
+
         comment_form = CommentForm(data=request.POST)
 
         if comment_form.is_valid():

@@ -172,7 +172,7 @@ Both fonts were chosen from [Google Fonts](https://fonts.google.com/ 'Google Fon
 #### Imagery
 To match the colour scheme chosen, I chose an image of heads of lettuce for the hero image on the index page.  The site is called Lettuce Eat and therefore I didn't want to put a big image of a salad.  If the salad had ingredients in it that a user didn't like, there would be the potential of the user closing the site before scrolling down to the recipes.  That's why I thought it would be more fun to use the lettuce and have it tie in with the site name.
 
-On each recipe page, an image of the finished meal is shown with the recipe to allow the user to visualise the end product.
+On each recipe page, an image of the finished meal is shown with the recipe to allow the user to visualise the end product.  Not all of the images completely match the recipe, but I was confined by the limits of what free images were available.
 
 All of the recipe images are from [Pixabay](https://pixabay.com/ 'Pixabay website').
 The header image is from [Unsplash](https://unsplash.com/ 'Unsplash website').
@@ -184,100 +184,24 @@ The header image is from [Unsplash](https://unsplash.com/ 'Unsplash website').
 ### Design Features
 Each page of the website features a consistent responsive navigational system:
 
-- The **Header** contains a conventionally placed logo in the top left of the page (whereby clicking this will redirect users back to the home page) and a navigation bar in the centre of the header. On smaller screens, the navigation bar condenses into a dropdown with navigation options.
+- The **Header** contains a conventionally placed logo in the top left of the page (whereby clicking this will redirect users back to the home page) and a navigation bar also starting on the left after the logo. On smaller screens, the navigation bar condenses into a dropdown with navigation options.  I chose to make the dropdown horizontal so that it didn't take up too much real estate on the screen.
 
-- There is a **Header Image** on most pages, depicting a selection of ingredients and utensils on a dark background. This image is used to keep the theme consistent and is only missing in the recipe pages where the focus is instead brought to an image of the recipe itself, or a placeholder if none is provided.
+- The **Header Image** on the home page, depicts heads of lettuce, to fit in with the theme of the site.
 
-- The **Footer** is divided into five sections, four columns and a bottom row. The first column contains a short blurb, telling the user about the site. The second contains useful links to utensil shopping, budgeting ideas and more. The third has navigation links to the Student Rations site. The fourth has a list of contact information. Finally, the bottom row contains social links and copyright information. On smaller screens, this condenses into a single column, with each section moving underneath its neighbour on the left.
-
-<dl>
-  <dt><a href="https://student-rations.herokuapp.com/" target="_blank" alt="Home Page">Home Page</a></dt>
-  <dd>The Home Page is laid out with a nav section on top, an image below the width of the screen, the content area containing the recipe cards, followed by the footer. The features are as follows:
-     <ul>
-          <li><strong>A Welcome Note or Login Request</strong> - On the home screen you will see, below the header image, either a request to log in or register to the site or a heading welcoming the user to the site, citing the user's username.
-          </li>
-          <li><strong>Recipe Cards</strong> - The main content has recipe cards that are four cards across on large screens, two across on medium screens and one across on small screens. This is paginated by eight so anything more than eight cards will be shown on the next page.
-          </li>
-          <li><strong>Next/Prev Page Link</strong> - If more than eight recipes are available, the remainder will be shown on the next page, with a max of eight cards on each of the following pages. To access these, there is a Next or Prev link that shows underneath the recipe cards.
-          </li>
-     </ul>
-  </dd>
-
-  <dt><a href="https://student-rations.herokuapp.com/about/" target="_blank" alt="About Page">About Page</a></dt>
-  <dd>The about page shows a brief overview of the developer and their story:
-     <ul>
-          <li><strong>Content</strong> - There is information about the developer and their story on this page.
-          </li>
-     </ul>
-  </dd>
-
-  <dt><a href="https://student-rations.herokuapp.com/creamy-courgette-lasagne/" target="_blank" alt="Recipe Page - Creamy courgette lasagne">Recipe Page</a></dt>
-  <dd>This page shows the details of each recipe. This page does not contain a header image but is instead divided into two sections on top, followed by a single column section and commenting section underneath. The features are as follows:
-     <ul>
-          <li><strong>Featured Image</strong> - The featured image shows the image the user uploaded, or the placeholder image if no image was uploaded by the user.
-          </li>
-          <li><strong>Like/Unlike Button</strong> - If the user is logged in, the like/unlike button will appear green and will allow the user to like the recipe. If they have already liked the recipe, clicking the button will remove the like.
-          </li>
-          <li><strong>Edit/Delete Buttons</strong> - If the user is logged in and is the author of the said recipe, clicking the edit button will bring the user to the edit page. The recipe details are populated into the form and the user can edit the information, upload a new image and save the information. Alternatively, clicking the delete button removes the recipe from the database and redirects the user back to the home page.
-          </li>
-          <li><strong>Comment Feature</strong> - If the user is logged in, the comment form is visible under the recipe on the right of the page. Entering a comment and submitting will then cause the form to disappear and a message will show advising the comment is awaiting approval. On approval, comments are displayed under the recipe on the left of the page, showing the user's name and date and time of commenting.
-          </li>
-     </ul>
-  </dd>
-
-  <dt><a href="https://student-rations.herokuapp.com/edit-a-recipe/creamy-courgette-lasagne" target="_blank" alt="Edit Recipe Page - Creamy courgette lasagne">Edit Recipe Page</a></dt>
-  <dd>This page shows the form populated with the specific recipe's information which can be saved and edited:
-     <ul>
-          <li><strong>Edit Recipe Form</strong> - The form is prepopulated with all the recipe information. The user can edit this information, only if they are the author of the recipe. Saving this recipe redirects the user to the home page where they can then view the recipe list.
-          </li>
-     </ul>
-  </dd>
-
-  <dt><a href="https://student-rations.herokuapp.com/share-a-recipe/" target="_blank" alt="Share a Recipe Page">Share a Recipe Page</a></dt>
-  <dd>This page has a form that allows the user to add a recipe, as well as upload an image:
-     <ul>
-          <li><strong>Share a Recipe Form</strong> - An empty form is displayed, allowing the user to enter the recipe details, as well as upload an image of the recipe. If no image is uploaded, the placeholder image is saved instead. Saving this recipe redirects the user to the home page where they can then view the recipe list.
-          </li>
-     </ul>
-  </dd>
-
-  <dt><a href="https://student-rations.herokuapp.com/accounts/login/" target="_blank" alt="Sign In Page">Sign In Page</a></dt>
-  <dd>This page has a form allowing the user to enter their username and password to log in:
-     <ul>
-          <li><strong>Sign In Form</strong> - This form has two input fields, for the username and the password. A submit button at the end of the form login the user in, if the information was correct, and redirects the user to the home page.
-          </li>
-     </ul>
-  </dd>
-  
-  <dt><a href="https://student-rations.herokuapp.com/accounts/logout/" target="_blank" alt="Sign Out Page">Sign Out Page</a></dt>
-  <dd>The :
-     <ul>
-          <li><strong>Sign Out Button</strong> - This page asks the user if they are sure they want to log out. Clicking the Sign Out button will log the user out and redirect them to the home page.
-          </li>
-     </ul>
-  </dd>
-  
-  <dt><a href="https://student-rations.herokuapp.com/accounts/signup/" target="_blank" alt="Sign Up Page">Sign Up Page</a></dt>
-  <dd>This page has a form allowing the user to enter their username, email and password to register an account:
-     <ul>
-          <li><strong>Sign In Form</strong> - This form has four input fields, for the username, email address (optional), the password and repeat the same password. A submit button at the end of the form login the user in if the information was correct and has not been used by other users previously, and redirects the user to the home page.
-          </li>
-     </ul>
-  </dd>
-</dl>
+- The **Footer** is intentionally simple in order to complement the clean simplicity of the rest of the site.  Clicking on the "Lettuce Eat" will redirect the user back to the home page. The second row has navigation links to the rest of the Lettuce Eat site, this changes to reflect if a user is logged in or not. The third row contains social links and copyright information.
  
 ### Existing Features
 - **Header Logo** - Appearing on every page for brand recognition. Clicking the logo will return the users to the home page, as expected.
 - **Header Navigation Bar** - Appearing on every page for a consistently easy and intuitive navigable system.
-- **Header Image** - Appearing on almost every page, the image gives a consistent theme and style throughout the site.
+- **Header Image** - Appears on the home page, by way of an introduction to the theme of the site.
 - **Social Icons** - Appearing on every page, the icons are appropriate representations of the Social Media platforms, found in the footer.
-- **Recipe Cards** - Appearing on the home page, the recipe cards give a brief overview of the recipe, showing the image, description, servings, prep and cook time, and the number of likes on the recipe.
-- **Recipe Form** - Appearing on the share a recipe page and edit recipe page, the form allows the user to add or edit a recipe, including adding an image to display on the recipe page and recipe card.
+- **Recipe Cards** - Appearing on the home page, the recipe cards give a brief overview of the recipe, showing the image, servings, difficulty, prep and cook time, and the number of likes on the recipe.
+- **Recipe Form** - Appearing on the add a recipe page and edit recipe page, the form allows the user to add or edit a recipe, including adding an image to display on the recipe page and recipe card.
 - **Comment Form** - Appearing on the recipe page, the form submits the user's comment to be approved by the admin.
 - **Comments Section** - Appearing on the recipe page, approved comments are displayed showing the author's username and the date and time of submission.
 - **Like/Unlike Button** - Appearing on the recipe page when the user is logged in, the button allows the user to like or unlike a recipe. If the user is not logged in, they will simply see the number of likes on the page.
 - **Home Page** - A home page that shows the user the site's available recipes, shown as recipe cards and paginated by eight. There is a next/prev button under the recipes allowing the user to explore all recipes. In addition, if the user is logged in, a welcome message appears on the home page with the user's username. Otherwise, a short message recommending the user logs in or registers an account is shown.
-- **About Page** - An About Page gives the user information about the developer and their story.
+- **About Page** - An About Page gives the user information about the topic of the site.
 - **Recipe Page** - A recipe page whose content changes with the recipe details of the chosen recipe. Includes features to like and comment as well as edit or delete.
 - **Add/Edit Recipe Page** - A page designed to allow the user to add a recipe if logged in, and edit a recipe if they are logged in as the recipe's author. 
 - **Sign In Page** - A page designed to allow the user to log in using previously created user details; a username and a password.
@@ -286,17 +210,17 @@ Each page of the website features a consistent responsive navigational system:
 
 ### Features to Implement in the future
 - **Favourites Page**
-     - **Feature** - This feature would have been used to display all the recipes a user would have liked so the user could find them easier.
-     - **Reason for not featuring in this release** - The reason for not releasing this feature was that the developer ran out of time to implement the feature before the project's due date. This will be developed further in the future after grading is complete.
+     - **Feature** - This feature would have been used to display all the recipes a user has liked so the user could find them more easily.
+     - **Reason for not featuring in this release** - The reason for not releasing this feature was that I ran out of time to implement the feature before the project's due date. This will be developed further in the future after grading is complete.
 - **Sharing Images in Comments**
      - **Feature** - This feature would have allowed users to upload images of their attempts at the recipes in the comments section next to their comment.
-     - **Reason for not featuring in this release** - Again, the developer ran out of time to implement this feature before the project's due date. This will also be developed further in the future after grading is complete.
+     - **Reason for not featuring in this release** - Again, I ran out of time to implement this feature before the project's due date. This will also be developed further in the future after grading is complete.
 - **Saving Drafts to a Profile Page**
-     - **Feature** - This feature would have allowed users to create a draft of a recipe which would be saved on a profile page which would allow them to complete the draft at a later date and release the recipe onto the site.
-     - **Reason for not featuring in this release** - Once again, the developer ran out of time to implement this feature before the project's due date. This will also be developed further in the future after grading is complete.
+     - **Feature** - This feature would have allowed users to create a draft of a recipe which would be saved on a profile page and would allow them to complete the draft at a later date and release the recipe onto the site.
+     - **Reason for not featuring in this release** - Once again, I ran out of time to implement this feature before the project's due date. This will also be developed further in the future after grading is complete.
 - **Search Recipes**
      - **Feature** - This feature would have allowed users to search recipes, either by typing the name of a recipe, or searching for a specific category of recipes e.g. Vegan.
-     - **Reason for not featuring in this release** - Once again, the developer ran out of time to implement this feature before the project's due date. This will also be developed further in the future after grading is complete.
+     - **Reason for not featuring in this release** - Once again, I ran out of time to implement this feature before the project's due date. This will also be developed further in the future after grading is complete.
 - **Categorise Recpies**
      - **Feature** - Recipes could be organised into categories, thus enabling users to search by categories.
      - **Reason for not featuring in this release** - In hindsight, this would have been very easy to implement at the beginning of the project when I was designing the models.  I will include this in the future, after grading is complete.
@@ -312,7 +236,9 @@ Each page of the website features a consistent responsive navigational system:
 **Bug** - I discovered that if a user tried to register with an email address, it would throw a Connection Refused Error, but a user was still able to log in anyway.
 - ***Solution***: I checked for similar problems on the Code Institute Slack, and I also asked fellow student Patrik Osterljung who I know had a similar problem with his Project 4.  I needed to make some adjustments to my settings.py file.  Notably, ACCOUNT_EMAIL_VERIFICATION = 'none' allowed it to work.
 
-**Issue** - The developer found while validating the site's html that the Summernote feature implemented in the forms threw up a large number of errors. Unfortunately this is not something the developer was able to rectify and as such was left in the code. It will be noted that these errors were not caused by the developer and as such should hopefully not count toward the final grade.
+**Bug** - When deploying to Heroku near the end of the project, having not deployed since my initial deployment, I found that the static files were not coming through even though I could see that they were there in my Cloudinary console.
+- ***Solution***: I spent rather a long time talking to Tutor Support, I renamed images, I deleted everything out of Cloudinary.  We tried a lot of things.  In the end, the solution was ridiculously simple (see image below), whereby I had an extra "/" on the very first image the site was loading and it was causing the whole rest of the styling to not work.  Many thanks to Scott from Code Institute's Tutor Support for finally cracking it.
+![Heroku Deployment Issue](static/site_images/readme/theproblem.png 'Heroku Deployment Issue')
 
 **Issue** - The developer found errors when validating the python files. This was found in the settings.py file where certain urls went beyond the character limit on a single line. This error can be ignored as there is no way to reduce the url length to conform to the character limit per line.
 
@@ -341,7 +267,7 @@ Each page of the website features a consistent responsive navigational system:
 - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/ "Link to the Crispy Forms documentation.
     - Crispy Forms was used to style the add and edit recipe forms, allowing more than one field to occupy a line on the form.
 - [Google Fonts](https://fonts.google.com/ "Link to Google Fonts")
-    - Google fonts were used to import the fonts "Roboto" and "Open Sans" into the style.css file. These fonts were used throughout the project.
+    - Google fonts were used to import the fonts "Poppins" and "Dancing Script" into the style.css file. These fonts were used throughout the project.
 - [Font Awesome](https://fontawesome.com/ "Link to FontAwesome")
      - Font Awesome was used on all pages throughout the website to import icons (e.g. social media icons) for UX purposes.
 - [Git](https://git-scm.com/ "Link to Git homepage")
@@ -393,15 +319,16 @@ To deploy this page to Heroku from its GitHub repository, the following steps we
     - Create three directories in the main directory; media, storage and templates.
     - Create a file named "Procfile" in the main directory and add the following:
         - web: gunicorn project-name.wsgi
-    - Go to Deploy tab on Heroku and connect to the GitHub, then to the required recpository.
-    Click on Delpoy Branch and wait for the build to load. When the build is complete, the app can be opened through Heroku.
+    - Log in to Heroku using the terminal heroku login -i.
+    - Then run the following command: **heroku git:remote -a your_app_name_here** and replace your_app_name_here with the name of your Heroku app. This will link the app to your Gitpod terminal.
+    - After linking your app to your workspace, you can then deploy new versions of the app by running the command **git push heroku main** and your app will be deployed to Heroku.
 
 
 ### Forking the Repository
 By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
 
 1. Log into [GitHub](https://github.com/login "Link to GitHub login page") or [create an account](https://github.com/join "Link to GitHub create account page").
-2. Locate the [GitHub Repository](https://github.com/rebeccatraceyt/KryanLive "Link to GitHub Repo").
+2. Locate the [GitHub Repository](https://github.com/Kat632/PP4-LettuceEat "Link to GitHub Repo").
 3. At the top of the repository, on the right side of the page, select "Fork"
 4. You should now have a copy of the original repository in your GitHub account.
 
@@ -410,14 +337,14 @@ How to run this project locally:
 1. Install the [GitPod Browser](https://www.gitpod.io/docs/browser-extension/ "Link to Gitpod Browser extension download") Extension for Chrome.
 2. After installation, restart the browser.
 3. Log into [GitHub](https://github.com/login "Link to GitHub login page") or [create an account](https://github.com/join "Link to GitHub create account page").
-2. Locate the [GitHub Repository](https://github.com/rebeccatraceyt/KryanLive "Link to GitHub Repo").
+2. Locate the [GitHub Repository](https://github.com/Kat632/PP4-LettuceEat "Link to GitHub Repo").
 5. Click the green "GitPod" button in the top right corner of the repository.
 This will trigger a new gitPod workspace to be created from the code in github where you can work locally.
 
 How to run this project within a local IDE, such as VSCode:
 
 1. Log into [GitHub](https://github.com/login "Link to GitHub login page") or [create an account](https://github.com/join "Link to GitHub create account page").
-2. Locate the [GitHub Repository](repo url "Link to GitHub Repo").
+2. Locate the [GitHub Repository](https://github.com/Kat632/PP4-LettuceEat "Link to GitHub Repo").
 3. Under the repository name, click "Clone or download".
 4. In the Clone with HTTPs section, copy the clone URL for the repository.
 5. In your local IDE open the terminal.
@@ -430,9 +357,6 @@ git clone https://github.com/USERNAME/REPOSITORY
 
 Further reading and troubleshooting on cloning a repository from GitHub [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository "Link to GitHub troubleshooting")
 
-**UPDATE**
-
-
 [Back to top ⇧](#Lettuce-Eat)
 
 ## Credits 
@@ -443,7 +367,7 @@ Further reading and troubleshooting on cloning a repository from GitHub [here](h
 - The Fun Facts about Salad on the About page, plus the quote were taken from [Love My Salad](https://www.lovemysalad.com/ "Link to Love my Salad website").
 
 ### Media
-- The images have been sourced from the [Pixabay](https://pixabay.com/) by the developer.  It was quite difficult to find free pictures of salad that fit with the recipes I wanted to include.
+- The images have been sourced from the [Pixabay](https://pixabay.com/) and [Unsplash](https://unsplash.com).
 
 ### Code 
 References used:
@@ -464,7 +388,8 @@ References used:
 
 - I would like to thank my husband for putting up with me during the process of design and development.  He makes sure I am fed, watered and taking regular breaks.
 - I would also like to thank Andrew Dempsey, for his invaluable help and guidance in getting Summernote to work with my forms.
-- Finally, I would like to thank the rest of my August 2021 Hackathon team - Helena, Patrik and Yorick.
+- Thanks also to Code Institute's Tutor Support - who helped me get the site deployed correctly over many hours.
+- Finally, I would like to thank the rest of my August 2021 Hackathon team - Helena, Patrik and Yorick because you are all incredibly supportive and we still work well together as a team.
 
 [Back to top ⇧](#Lettuce-Eat)
 

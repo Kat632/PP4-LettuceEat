@@ -7,6 +7,7 @@ from cloudinary.models import CloudinaryField
 STATUS = ((0, "Draft"), (1, "Published"))
 LEVEL = ((0, "Easy"), (1, "Regular"), (2, "Hard"))
 
+
 class Recipe(models.Model):
     """
     Model for the Recipe
@@ -37,13 +38,13 @@ class Recipe(models.Model):
         Order the recipes in descending order.
         """
         ordering = ['-created_on']
-    
+
     def __str__(self):
         """
         Returns a string showing the title.
         """
         return str(self.title)
-    
+
     def amount_of_likes(self):
         """
         See number of likes on a recipe.
@@ -86,6 +87,6 @@ class Comment(models.Model):
         Order by oldest comment first
         """
         ordering = ['created_on']
-    
+
     def __str__(self):
         return f"Comment {self.body} by {self.name}"

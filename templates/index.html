@@ -44,7 +44,6 @@ aria-current="page" id="active-green"
 
 <!-- Main Content -->
 {% block content %}
-<main>
 
     <div class="container-fluid text-container">
         {% if user.is_authenticated %}
@@ -61,12 +60,12 @@ aria-current="page" id="active-green"
         <h4 class="text-center mb-5">Who says salads have to be boring? We're here to tell you that salads can be
             creative, balanced and tasty.</h4>
             <hr class="mt-3 mb-5 orange-rule">
-        <p class="text-center mb-5">Please visit our <a class="link" href="#">About Page</a> to find out more about
+        <p class="text-center mb-5">Please visit our <a class="link" href="{% url 'about' %}">About Page</a> to find out more about
             salad.</p>
             <p class="text-center mb-5 fw-bold black-text">In the meantime, please browse our recipes below to find your perfect salad!</p>
         <p class="text-center mb-5">If you wish to share your own recipes, please <a class="link"
-                href="{% url 'account_login' %}">log
-                in</a>, or create an account <a class="link" href="{% url 'account_signup' %}"></a>.
+                href="{% url 'account_login' %}" {% block aria_login %}{% endblock %}>log
+                in</a>, or create an account <a class="link" href="{% url 'account_signup' %}" {% block aria_signup %}{% endblock %}></a>.
         </p>
         <hr class="mt-3 mb-5 orange-rule">
         {% endif %}
@@ -135,5 +134,4 @@ aria-current="page" id="active-green"
         </div>
     </div>
     {% endblock %}
-
-</main>
+    

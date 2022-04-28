@@ -56,8 +56,15 @@ p {
   margin-bottom: 25px;
 }
 
-.orange-text {
-  color: #F3722C;
+.black-lettuce-text {
+  color: black;
+  font-size: 3rem;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.black-text {
+  color: black;
 }
 
 .text-container {

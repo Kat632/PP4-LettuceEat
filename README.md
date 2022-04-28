@@ -2,7 +2,7 @@
 
 ![Lettuce Eat - Responsive](#)
 
-[View the live project here](# "Link to deployed site - Lettuce Eat")
+[View the live project here](https://lettuce-eat-pp4.herokuapp.com/ "Link to deployed site - Lettuce Eat")
 
 ## Table of contents
 1. [Introduction](#Introduction)
@@ -68,7 +68,7 @@ My project is a recipe blog dedicated to salad, called Lettuce Eat.  Users can r
 
 10. As a **logged-in user** I can **click a button** so that **I can edit a recipe I have previously submitted**.
 
-11. As a **logged-in user** I can **clic a button** so that **I can delete a recipe I have previously submitted**.
+11. As a **logged-in user** I can **click a button** so that **I can delete a recipe I have previously submitted**.
 
 #### Site Admin:
 1. As a **Site Admin**, I can **create, read, update and delete recipes** so that **I can manage my site content**.
@@ -111,9 +111,9 @@ The website needs to enable the **admin** to:
 - approve recipe uploads and comments.
 - create drafts so they can be completed later.
 
-With the user stories in mind, the developer created the below strategy table to determine the trade-off of importance and viability with the following results:
+With the user stories in mind, I created the below strategy table to determine the trade-off of importance and viability with the following results:
 
-![Strategy Table](static/media/README/strategy-table.png 'Strategy Table')
+![Strategy Table](static/site_images/readme/strategy.png 'Strategy Table')
 
 #### Scope
 A scope was defined to identify what needed to be done to align features with the strategy previously defined. This was broken into two categories:
@@ -121,14 +121,13 @@ A scope was defined to identify what needed to be done to align features with th
      - The user will be looking for:
         - a comprehensive list of recipes.
 	    - a comprehensive list of ingredients and steps to follow.
-	    - a list of comments and images of others' attempts to replicate the meal on each recipe page.
+	    - a list of comments about others' attempts to replicate the meal on each recipe page.
 
 - **Functionality Requirements**
      - The user will be able to:
         - Easily navigate the site to find the information they want.
 	    - Be able to select recipes they wish to try.
 	    - Comment on and like recipes.
-	    - Upload images in the comments section to show their results of trying the recipe.
 
 #### Structure
 The information architecture was organized in such a way as to ensure that users can navigate through the site easily.
@@ -175,7 +174,8 @@ To match the colour scheme chosen, I chose an image of heads of lettuce for the 
 
 On each recipe page, an image of the finished meal is shown with the recipe to allow the user to visualise the end product.
 
-All of the recipe images are from [Pixabay](https://pixabay.com/ 'Pixabay website'). 
+All of the recipe images are from [Pixabay](https://pixabay.com/ 'Pixabay website').
+The header image is from [Unsplash](https://unsplash.com/ 'Unsplash website').
 
 [Back to top ⇧](#Lettuce-Eat)
 

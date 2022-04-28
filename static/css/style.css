@@ -45,7 +45,7 @@ p {
   background-color: #F3722C;
 }
 
-.text-center {
+.text-center-caption {
   position: relative;
 }
 
@@ -276,6 +276,10 @@ ABOUT PAGE
 
 .link {
   color: #00803f;
+}
+
+.link a:hover {
+  color: #74b807;
 }
 
 .more-about {

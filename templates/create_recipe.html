@@ -33,7 +33,7 @@ aria-current="page" id="active-green"
                     <div class="col">
                         {% csrf_token %}
                         <div class="row">
-                                {{ recipe_form.title | as_crispy_field | safe }}
+                            {{ recipe_form.title | as_crispy_field | safe }}
                         </div>
                         <div class="row">
                             {{ recipe_form.excerpt | as_crispy_field | safe }}
@@ -74,11 +74,16 @@ aria-current="page" id="active-green"
 {% else %}
 <div class="container">
     <div class="row">
-        <div class="col mt-3 mb-5 text-light text-center">
-            <h1 class="mb-5">I'm sorry, you're not logged in!</h1>
-            <p>Please <a href="{% url 'account_login' %}">log in</a> or <a
-                    href="{% url 'account_signup' %}">register</a> to share a recipe.</p>
-        </div>
+        <h2 class="text-center mt-3 fw-bold mb-5 black-lettuce-text">
+            Sorry, you're not logged in to <span class="dancing-text">Lettuce Eat</span>
+        </h2>
+        <p class="text-center mb-5">If you wish to share your own recipes, please <a class="link"
+                href="{% url 'account_login' %}" {% block aria_login %}{% endblock %}>log
+                in</a>, or <a class="link" href="{% url 'account_signup' %}"
+                {% block aria_signup %}{% endblock %}>create an account.</a>
+        </p>
+
+
     </div>
 </div>
 

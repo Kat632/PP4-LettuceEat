@@ -16,7 +16,8 @@ class Recipe(models.Model):
     slug = AutoSlugField(populate_from='title', unique=True,)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="recipes")
-    excerpt = models.TextField(blank=True)
+    excerpt = models.TextField(blank=True, 
+        help_text = "Write a short summary of your recipe here")
     status = models.IntegerField(choices=STATUS, default=0)
     created_on = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     last_updated = models.DateTimeField(auto_now=True)

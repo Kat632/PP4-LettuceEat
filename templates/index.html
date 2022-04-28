@@ -30,7 +30,7 @@ aria-current="page" id="active-green"
                 alt="lettuce background image">
             <div class="col-lg-6 mx-auto">
                 <div class="caption">
-                    <div class="text-center">
+                    <div class="text-center-caption">
                         <h1 class="display-5 fw-bolder mb-2 black-lettuce-text">Lettuce Eat</h1>
                         <h2 class="lead mb-4 black-lettuce-text">A recipe blog dedicated to the love of salad!</h2>
                     </div>
@@ -65,8 +65,9 @@ aria-current="page" id="active-green"
             <p class="text-center mb-5 fw-bold black-text">In the meantime, please browse our recipes below to find your perfect salad!</p>
         <p class="text-center mb-5">If you wish to share your own recipes, please <a class="link"
                 href="{% url 'account_login' %}" {% block aria_login %}{% endblock %}>log
-                in</a>, or create an account <a class="link" href="{% url 'account_signup' %}" {% block aria_signup %}{% endblock %}></a>.
+                in</a> or, <a class="link" href="{% url 'account_signup' %}" {% block aria_signup %}{% endblock %}>create an account.</a>
         </p>
+
         <hr class="mt-3 mb-5 orange-rule">
         {% endif %}
     </div>
@@ -119,13 +120,13 @@ aria-current="page" id="active-green"
                 <ul class="pagination justify-content-center">
                     {% if page_obj.has_previous %}
                     <li>
-                        <a href="?page={{ page_obj.previous_page_number }}" class="page_link">&laquo;
+                        <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo;
                             Previous</a>
                     </li>
                     {% endif %}
                     {% if page_obj.has_next %}
                     <li>
-                        <a href="?page={{ page_obj.next_page_number }}" class="page_link">Next &raquo;</a>
+                        <a href="?page={{ page_obj.next_page_number }}" class="page-link">Next &raquo;</a>
                     </li>
                     {% endif %}
                 </ul>

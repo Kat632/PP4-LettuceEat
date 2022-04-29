@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # DEBUG = 'DEVELOPMENT' in os.environ
 DEBUG = False
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+X_FRAME_OPTIONS = 'ALLOW-FROM http://ami.responsivedesign.is'
 
 ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['lettuce-eat-pp4.herokuapp.com', 'localhost']

@@ -23,7 +23,7 @@
 #### User Stories:
 1. As a **user**, I can **view a summary page of recipes** so that **I can easily see if there is a recipe that I would like to view in more detail**.
   
-    - The list of recipes on the home page has been paginated by eight. If there are more than eight recipes, the remainder moves to the next page. This will continue until there are eight or less recipe cards on the one page.
+    - The list of recipes on the home page has been paginated by six. If there are more than six recipes, the remainder moves to the next page. This will continue until there are six or less recipe cards on the one page.
 
 2. As a **user** I can **click on a recipe to open it** so that **I can see the full list of ingredients and the instructions**.
     

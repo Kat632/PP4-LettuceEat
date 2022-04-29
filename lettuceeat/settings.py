@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # DEBUG = 'DEVELOPMENT' in os.environ
 DEBUG = False
 
-X_FRAME_OPTIONS = 'ALLOW-FROM http://ami.responsivedesign.is'
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['lettuce-eat-pp4.herokuapp.com', 'localhost']
@@ -194,7 +194,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SUMMERNOTE_CONFIG = {
-    'iframe': False,
+    'iframe': True,
     # You can put custom Summernote settings
     'summernote': {
         # Change editor size

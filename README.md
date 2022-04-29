@@ -1,6 +1,6 @@
 # Lettuce Eat
 
-![Lettuce Eat - Responsive](#)
+![Lettuce Eat - Responsive](static/site_images/readme/responsive.png 'Shows responsive views of site')
 
 [View the live project here](https://lettuce-eat-pp4.herokuapp.com/ "Link to deployed site - Lettuce Eat")
 
@@ -154,7 +154,7 @@ Create/Edit Recipe Page:
 ### Design
 
 #### Colour Scheme
-I chose to use a clean white background, using green for the typography and flashes of orange, yellow and red which are typical salad colours.  I wanted the website to look fresh and convey a healthy feeling.
+I chose to use a clean white background, using green and black for the typography and flashes of orange, yellow and red which are typical salad colours.  I wanted the website to look fresh and convey a healthy feeling.
 
 The white background allows the colours in the recipe images to look bright, appetising and attractive.
 
@@ -223,7 +223,7 @@ Each page of the website features a consistent responsive navigational system:
      - **Reason for not featuring in this release** - Once again, I ran out of time to implement this feature before the project's due date. This will also be developed further in the future after grading is complete.
 - **Categorise Recpies**
      - **Feature** - Recipes could be organised into categories, thus enabling users to search by categories.
-     - **Reason for not featuring in this release** - In hindsight, this would have been very easy to implement at the beginning of the project when I was designing the models.  I will include this in the future, after grading is complete.
+     - **Reason for not featuring in this release** - In hindsight, this would have been easier to implement at the beginning of the project when I was designing the models.  I will include this in the future, after grading is complete.
 
  
 [Back to top ⇧](#Lettuce-Eat)
@@ -239,6 +239,10 @@ Each page of the website features a consistent responsive navigational system:
 **Bug** - When deploying to Heroku near the end of the project, having not deployed since my initial deployment, I found that the static files were not coming through even though I could see that they were there in my Cloudinary console.
 - ***Solution***: I spent rather a long time talking to Tutor Support, I renamed images, I deleted everything out of Cloudinary.  We tried a lot of things.  In the end, the solution was ridiculously simple (see image below), whereby I had an extra "/" on the very first image the site was loading and it was causing the whole rest of the styling to not work.  Many thanks to Scott from Code Institute's Tutor Support for finally cracking it.
 ![Heroku Deployment Issue](static/site_images/readme/theproblem.png 'Heroku Deployment Issue')
+
+**Bug** - At the very end of the project when testing the CRUD functionality of the Admin panel, I realised that the summernote_fields were not working, but they were working in the create/edit form pages of the site.
+- ***Solution***: In the settings.py file, I changed the SUMMERNOTE_CONFIG settings to 'iframe': True and then it worked.  I used [this post](https://github.com/summernote/django-summernote/issues/379 "Link to post on GitHub") from Summernote's GitHub to help solve the problem.
+
 
 **Issue** - The Summernote feature implemented in the forms threw up a large number of errors. Unfortunately this is not something I was able to rectify and as such was left in the code. It will be noted that these errors were not caused by me and as such should hopefully not count toward the final grade.
 
@@ -266,7 +270,7 @@ Each page of the website features a consistent responsive navigational system:
      - Cloudinary was used as free cloud storage for images uploaded to the site through the recipe forms.
 - [Summernote](https://summernote.org "Link to Summernote page")
      - Summernote was used to allow users to add styling when adding a recipe to the site. This is particularly useful for using bullet points for ingredients or numbering the steps for the recipe.
-- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/ "Link to the Crispy Forms documentation.
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/ "Link to the Crispy Forms documentation")
     - Crispy Forms was used to style the add and edit recipe forms, allowing more than one field to occupy a line on the form.
 - [Google Fonts](https://fonts.google.com/ "Link to Google Fonts")
     - Google fonts were used to import the fonts "Poppins" and "Dancing Script" into the style.css file. These fonts were used throughout the project.
@@ -287,7 +291,7 @@ Testing information can be found in a separate [testing file](TESTING.md "Link t
 
 ## Deployment
 
-This project was developed using a [GitPod](https://gitpod.io/ "Link ot GitPod") workspace. The code was commited to [Git](https://git-scm.com/ "Link to Git") and pushed to [GitHub](https://github.com/ "Link to GitHub") using the terminal.
+This project was developed using a [GitPod](https://gitpod.io/ "Link to GitPod") workspace. The code was commited to [Git](https://git-scm.com/ "Link to Git") and pushed to [GitHub](https://github.com/ "Link to GitHub") using the terminal.
 
 ### Deploying on Heroku
 To deploy this page to Heroku from its GitHub repository, the following steps were taken:
@@ -369,7 +373,7 @@ Further reading and troubleshooting on cloning a repository from GitHub [here](h
 - The Fun Facts about Salad on the About page, plus the quote were taken from [Love My Salad](https://www.lovemysalad.com/ "Link to Love my Salad website").
 
 ### Media
-- The images have been sourced from the [Pixabay](https://pixabay.com/) and [Unsplash](https://unsplash.com).
+- The images have been sourced from [Pixabay](https://pixabay.com/) and [Unsplash](https://unsplash.com).
 
 ### Code 
 References used:
@@ -390,8 +394,8 @@ References used:
 
 - I would like to thank my husband for putting up with me during the process of design and development.  He makes sure I am fed, watered and taking regular breaks.
 - I would also like to thank Andrew Dempsey, for his invaluable help and guidance in getting Summernote to work with my forms.
-- Thanks also to Code Institute's Tutor Support - who helped me get the site deployed correctly over many hours.
-- Finally, I would like to thank the rest of my August 2021 Hackathon team - Helena, Patrik and Yorick because you are all incredibly supportive and we still work well together as a team.
+- Thanks also to Code Institute's Tutor Support (Ed, Alex and Scott) who helped me get the site deployed correctly over many hours.
+- Finally, I would like to thank the rest of my August 2021 Hackathon team - Helena, Patrik and Yorick because you are all incredibly supportive.
 
 [Back to top ⇧](#Lettuce-Eat)
 

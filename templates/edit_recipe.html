@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% load cloudinary %}
 {% load crispy_forms_tags %}
 {% load active_link_tags %}
@@ -10,13 +9,14 @@
 <title>Edit Your Recipe</title>
 {% endblock %}
 
+
 {% block content %}
     {% if user.is_authenticated %}
     <div class="container text-dark">
         <div class="row">
             <div class="col mt-3 mb-5">
-                <div class="yellow-box rounded">
-                    <h2 class="text-center lettuce-text">Edit Your Recipe</h2>
+                <div class="yellow-box rounded box-shadow">
+                    <h2 class="text-center lettuce-text text-shadow">Edit Your Recipe</h2>
                 </div>
                 <form action="?action=save" method="post" style="margin-top: 1.3em;" enctype="multipart/form-data">
                     <div class="row">

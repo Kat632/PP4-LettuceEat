@@ -98,6 +98,8 @@ Manual testing was conducted on the following elements of the [Recipe Page](http
 - Test that recipes can be edited by author only.
 
 - Test that recipes can only be deleted by author.
+
+- Test that a warning is given before a user deletes a recipe.
      
 - Test that recipes can be liked and unliked when logged in.
      
@@ -109,6 +111,8 @@ Manual testing was conducted on the following elements of the [Add Recipe Page](
 - Test that recipes create unique slugs, based on the title of the recipe.
 
 - Test that recipes with the same title will throw an error and ask the user to rename the recipe to something unique.
+
+- Test that recipes with an unrealistic prep or cook time will throw an error.
      
 - Test that recipes are saved.
      

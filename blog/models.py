@@ -17,27 +17,27 @@ class Recipe(models.Model):
     slug = AutoSlugField(populate_from='title', unique=True,)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="recipes")
-    excerpt = models.TextField(blank=True, 
-        help_text = "Write a short summary of your recipe here")
+    excerpt = models.TextField(blank=True,
+                               help_text="Write a short summary of the recipe")
     status = models.IntegerField(choices=STATUS, default=1)
     created_on = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     last_updated = models.DateTimeField(auto_now=True)
-    prep_time = models.IntegerField(default=1,         
-        validators=[
-            MaxValueValidator(100),
-            MinValueValidator(1)
-        ])
+    prep_time = models.IntegerField(default=1,
+                                    validators=[
+                                      MaxValueValidator(100),
+                                      MinValueValidator(1)
+                                    ])
     difficulty = models.IntegerField(choices=LEVEL, default=1)
     serves = models.IntegerField(default=1,
-            validators=[
-            MaxValueValidator(12),
-            MinValueValidator(1)
-        ])
+                                 validators=[
+                                   MaxValueValidator(12),
+                                   MinValueValidator(1)
+                                 ])
     cook_time = models.IntegerField(default=1,
-            validators=[
-            MaxValueValidator(120),
-            MinValueValidator(1)
-        ])
+                                    validators=[
+                                      MaxValueValidator(120),
+                                      MinValueValidator(1)
+                                    ])
     ingredients = models.TextField()
     method = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')

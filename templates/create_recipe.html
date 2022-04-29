@@ -9,6 +9,7 @@
 <title>Create Your Recipe</title>
 {% endblock %}
 
+
 <!-- Navbar Active Link -->
 {% block active_create %}
 active
@@ -20,13 +21,14 @@ active
 aria-current="page" id="active-green"
 {% endblock %}
 
+
 {% block content %}
 {% if user.is_authenticated %}
 <div class="container text-dark">
     <div class="row">
         <div class="col mt-3 mb-5">
-            <div class="yellow-box rounded">
-                <h2 class="text-center lettuce-text">Create your recipe here</h2>
+            <div class="yellow-box rounded box-shadow">
+                <h2 class="text-center lettuce-text text-shadow">Create your recipe here</h2>
             </div>
             <form action="." method="post" style="margin-top: 1.3em;" enctype="multipart/form-data">
                 <div class="row">
@@ -82,8 +84,6 @@ aria-current="page" id="active-green"
                 in</a>, or <a class="link" href="{% url 'account_signup' %}"
                 {% block aria_signup %}{% endblock %}>create an account.</a>
         </p>
-
-
     </div>
 </div>
 

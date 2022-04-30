@@ -36,7 +36,7 @@
 
 This is the fourth of five Portfolio Projects that I must complete during my Full Stack Software Development program with Code Institute.
 
-This was not the website that I intended to make for my fourth project, but I abandoned my first project with less than three weeks to go, in order to build something simpler, that I knew I could deliver on time.
+This was not the website that I intended to make for my fourth project, but I abandoned my first project with less than three weeks to go, in order to build something simpler, that I knew I could deliver on time.  The complexity of my previous project became too much for me because even though I was using Agile methodologies to plan my project, I was not using a logical and methodical process to write the code.  Once I had made the decision to restart, I followed the Django Blog tutorial from my Code Institute course, adpated it to my needs, and I found I got on much better.  Now that I have built Lettuce Eat, I feel much more confident about going back to finish what I originally started.
 
 The main requirements of this project were to build a Full Stack site based on business logic used to control a centrally-owned dataset. This also requires the developer to set up an authentication mechanism and provide role-based access to the site's data or other activities based on the dataset.
 

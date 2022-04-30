@@ -2,6 +2,12 @@ body {
   background-color: #ffffff;
 }
 
+.navbar > a 
+{
+    float: left;
+    margin-left: 15px;
+}
+
 /*
  FONT STYLING
 */

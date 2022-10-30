@@ -35,7 +35,7 @@ DEBUG = False
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['*']
-# ALLOWED_HOSTS = ['lettuce-eat-pp4.herokuapp.com', 'localhost']
+# ALLOWED_HOSTS = ['lettuce-eat-pp4.herokuapp.com', 'localhost', 'lettuce-eat-pp4.up.railway.app']
 
 LOGGING = {
     'version': 1,

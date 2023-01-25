@@ -2,7 +2,7 @@
 
 ![Lettuce Eat - Responsive](static/site_images/readme/responsive.png 'Shows responsive views of site')
 
-[View the live project here](https://lettuce-eat-pp4.herokuapp.com/ "Link to deployed site - Lettuce Eat")
+[View the live project here](https://pp4-lettuceeat.onrender.com/ "Link to deployed site - Lettuce Eat")
 
 ## Table of contents
 1. [Introduction](#Introduction)
